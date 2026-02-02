@@ -1,0 +1,45 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+env/
+.venv/
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Test
+tests/
+pytest_cache/
+.coverage
+
+# Docs innecesarios
+*.md
+!README.md
+CHANGELOG.md
+
+# Archivos temporales
+*.tmp
+*.bak
+
+# Preview/test HTML
+static/preview-icon.html
+static/generate-icons.html

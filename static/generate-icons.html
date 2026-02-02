@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generar Iconos PNG - Novia</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #1a1a2e;
+            min-height: 100vh;
+            padding: 40px;
+            color: #fff;
+        }
+        h1 { margin-bottom: 20px; }
+        .instructions {
+            color: #aaa;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .icon-item {
+            background: #2a2a4e;
+            padding: 20px;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        .icon-item canvas {
+            border-radius: 22%;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        .icon-item label {
+            color: #888;
+            font-size: 14px;
+        }
+        .icon-item a {
+            background: #31BEEF;
+            color: #000;
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+        }
+        .icon-item a:hover {
+            background: #5dd3f3;
+        }
+        /* Canvases ocultos para generar */
+        .hidden-canvas { display: none; }
+    </style>
+</head>
+<body>
+    <h1>Generar Iconos PNG para Novia</h1>
+    <p class="instructions">
+        Haz clic en "Descargar" para obtener cada icono en formato PNG.<br>
+        Luego colócalos en la carpeta <code>static/</code> del proyecto.
+    </p>
+
+    <div class="grid">
+        <div class="icon-item">
+            <label>Favicon 32×32</label>
+            <canvas id="icon-32" width="32" height="32"></canvas>
+            <a href="#" id="dl-32">Descargar</a>
+        </div>
+        <div class="icon-item">
+            <label>Favicon 64×64</label>
+            <canvas id="icon-64" width="64" height="64"></canvas>
+            <a href="#" id="dl-64">Descargar</a>
+        </div>
+        <div class="icon-item">
+            <label>Apple Touch 180×180</label>
+            <canvas id="icon-180" width="180" height="180"></canvas>
+            <a href="#" id="dl-180">Descargar</a>
+        </div>
+        <div class="icon-item">
+            <label>Android 192×192</label>
+            <canvas id="icon-192" width="192" height="192"></canvas>
+            <a href="#" id="dl-192">Descargar</a>
+        </div>
+        <div class="icon-item">
+            <label>Android 512×512</label>
+            <canvas id="icon-512" width="512" height="512"></canvas>
+            <a href="#" id="dl-512">Descargar</a>
+        </div>
+    </div>
+
+    <script>
+    // Semilla fija para que los iconos sean consistentes
+    let seed = 12345;
+    function seededRandom() {
+        seed = (seed * 16807) % 2147483647;
+        return (seed - 1) / 2147483646;
+    }
+
+    // Colores corporativos Novacutan
+    const COLORS = [
+        { r: 49, g: 190, b: 239 },   // Tech Cyan #31BEEF
+        { r: 153, g: 78, b: 149 },    // Visionary Violet #994E95
+        { r: 161, g: 184, b: 242 },   // Soft Blue #A1B8F2
+    ];
+
+    function lerpColor(c1, c2, t) {
+        return {
+            r: Math.round(c1.r + (c2.r - c1.r) * t),
+            g: Math.round(c1.g + (c2.g - c1.g) * t),
+            b: Math.round(c1.b + (c2.b - c1.b) * t),
+        };
+    }
+
+    function getCyclicColor(time, offset) {
+        const speed = 0.3;
+        const t = ((time * speed + offset) % 3 + 3) % 3;
+        const idx = Math.floor(t);
+        const frac = t - idx;
+        const c1 = COLORS[idx % 3];
+        const c2 = COLORS[(idx + 1) % 3];
+        return lerpColor(c1, c2, frac);
+    }
+
+    class Particle {
+        constructor(index, total) {
+            const phi = Math.acos(1 - 2 * (index + 0.5) / total);
+            const theta = Math.PI * (1 + Math.sqrt(5)) * index;
+            this.phi = phi;
+            this.theta = theta;
+            this.colorOffset = seededRandom() * 3;
+            this.baseSize = 1.5 + seededRandom() * 2.5;
+            this.baseAlpha = 0.5 + seededRandom() * 0.5;
+        }
+
+        getPosition(radius) {
+            const x = radius * Math.sin(this.phi) * Math.cos(this.theta);
+            const y = radius * Math.cos(this.phi);
+            const z = radius * Math.sin(this.phi) * Math.sin(this.theta);
+            return { x, y, z };
+        }
+    }
+
+    function renderOrbIcon(canvas, size) {
+        // Reset seed para consistencia
+        seed = 12345;
+
+        const ctx = canvas.getContext('2d');
+        const centerX = size / 2;
+        const centerY = size / 2;
+        const radius = size * 0.36;
+
+        // Fondo con gradiente suave
+        const bgGrad = ctx.createLinearGradient(0, 0, size, size);
+        bgGrad.addColorStop(0, '#F5F2FC');
+        bgGrad.addColorStop(1, '#EAE7F1');
+        ctx.fillStyle = bgGrad;
+        ctx.fillRect(0, 0, size, size);
+
+        // Glow de color
+        const glowColor = COLORS[0];
+        const glow = ctx.createRadialGradient(centerX, centerY, radius * 0.1, centerX, centerY, radius * 1.4);
+        glow.addColorStop(0, `rgba(${glowColor.r}, ${glowColor.g}, ${glowColor.b}, 0.2)`);
+        glow.addColorStop(0.5, `rgba(${glowColor.r}, ${glowColor.g}, ${glowColor.b}, 0.08)`);
+        glow.addColorStop(1, 'rgba(0, 0, 0, 0)');
+        ctx.fillStyle = glow;
+        ctx.fillRect(0, 0, size, size);
+
+        // Crear partículas (menos para iconos pequeños)
+        const numParticles = size < 64 ? 60 : size < 200 ? 100 : 120;
+        const particles = [];
+        for (let i = 0; i < numParticles; i++) {
+            particles.push(new Particle(i, numParticles));
+        }
+
+        const rotationY = 0.5;
+        const cosR = Math.cos(rotationY);
+        const sinR = Math.sin(rotationY);
+        const time = 1.5;
+
+        const projected = [];
+        for (const p of particles) {
+            const pos = p.getPosition(radius);
+            const rx = pos.x * cosR - pos.z * sinR;
+            const rz = pos.x * sinR + pos.z * cosR;
+            const ry = pos.y;
+
+            const screenX = centerX + rx;
+            const screenY = centerY + ry;
+            const depth = (rz / radius + 1) / 2;
+
+            projected.push({ x: screenX, y: screenY, z: rz, depth, particle: p });
+        }
+
+        projected.sort((a, b) => a.z - b.z);
+
+        // Ajustar tamaño de partículas según tamaño del icono
+        const sizeScale = size / 140;
+
+        for (const pp of projected) {
+            const p = pp.particle;
+            const color = getCyclicColor(time, p.colorOffset);
+            const depthScale = 0.4 + pp.depth * 0.6;
+            const dotSize = Math.max(0.5, p.baseSize * depthScale * sizeScale);
+            const alpha = p.baseAlpha * (0.3 + pp.depth * 0.7) * 0.85;
+
+            ctx.beginPath();
+            ctx.arc(pp.x, pp.y, dotSize, 0, Math.PI * 2);
+
+            // Para iconos muy pequeños, usar color sólido
+            if (size < 64) {
+                ctx.fillStyle = `rgba(${color.r}, ${color.g}, ${color.b}, ${alpha})`;
+            } else {
+                const gradient = ctx.createRadialGradient(
+                    pp.x - dotSize * 0.3, pp.y - dotSize * 0.3, 0,
+                    pp.x, pp.y, dotSize
+                );
+                gradient.addColorStop(0, `rgba(255, 255, 255, ${alpha * 0.9})`);
+                gradient.addColorStop(0.3, `rgba(${color.r}, ${color.g}, ${color.b}, ${alpha})`);
+                gradient.addColorStop(1, `rgba(${color.r}, ${color.g}, ${color.b}, ${alpha * 0.3})`);
+                ctx.fillStyle = gradient;
+            }
+            ctx.fill();
+        }
+    }
+
+    // Renderizar todos los iconos
+    const sizes = [32, 64, 180, 192, 512];
+    sizes.forEach(size => {
+        const canvas = document.getElementById(`icon-${size}`);
+        renderOrbIcon(canvas, size);
+
+        // Configurar descarga
+        const dlBtn = document.getElementById(`dl-${size}`);
+        dlBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const link = document.createElement('a');
+            link.download = size === 180 ? 'apple-touch-icon.png' :
+                           size === 32 ? 'favicon-32.png' :
+                           size === 64 ? 'favicon-64.png' :
+                           `icon-${size}.png`;
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        });
+    });
+    </script>
+</body>
+</html>

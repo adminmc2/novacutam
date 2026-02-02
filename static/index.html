@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="theme-color" content="#FBF8FF">
+    <title>Novia</title>
+    <!-- Tipografías corporativas -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/bold/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/fill/style.css">
+    <!-- Estilos -->
+    <link rel="stylesheet" href="/static/style.css?v=4.0.1">
+    <!-- Favicon y iconos para iOS/Android -->
+    <link rel="icon" type="image/svg+xml" href="/static/favicon.svg?v=3.9.1">
+    <link rel="apple-touch-icon" href="/static/apple-touch-icon.svg?v=3.9.1">
+    <link rel="manifest" href="/static/manifest.json?v=3.9.1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Novia">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Novia">
+</head>
+<body>
+    <div class="app-container">
+        <!-- ============================================
+             PANTALLA DE LOGIN
+             ============================================ -->
+        <main class="main-content login-screen" id="login-screen">
+            <div class="login-content">
+                <!-- Título -->
+                <h1 class="login-title">Novia</h1>
+
+                <!-- Orb -->
+                <div class="login-orb-wrapper">
+                    <div class="orb-container" id="login-orb-container"></div>
+                </div>
+
+                <!-- Descripción -->
+                <p class="login-description">
+                    Sistema personalizado y especializado<br>de agentes IA para procesos de<br>venta y atención médica
+                </p>
+
+                <!-- Campo usuario -->
+                <div class="login-field" id="login-field-user">
+                    <i class="ph ph-user"></i>
+                    <input type="text" id="login-user" placeholder="Usuario" autocomplete="username" required>
+                </div>
+
+                <!-- Campo contraseña -->
+                <div class="login-field" id="login-field-password">
+                    <i class="ph ph-lock"></i>
+                    <input type="password" id="login-password" placeholder="Contraseña" autocomplete="current-password" required>
+                </div>
+
+                <!-- Botón entrar -->
+                <button class="login-btn" id="login-btn" type="button">
+                    Entrar
+                </button>
+
+                <!-- Face ID -->
+                <button class="login-faceid" id="faceid-btn" type="button">
+                    <i class="ph ph-scan-smiley"></i>
+                    <span>Face ID</span>
+                </button>
+
+                <!-- Footer con logo Prisma Consul -->
+                <footer class="login-footer">
+                    <img src="/static/prisma-logo.svg" alt="Prisma Consul" class="login-footer__logo">
+                    <span class="login-footer__company">Prisma Consul</span>
+                    <span class="login-footer__copyright">© 2026 Todos los derechos reservados</span>
+                    <span class="login-footer__version">Versión 3.8.2</span>
+                </footer>
+            </div>
+        </main>
+
+        <!-- ============================================
+             PANTALLA DE BIENVENIDA
+             ============================================ -->
+        <main class="main-content welcome-screen hidden" id="welcome-screen">
+            <!-- Header con perfil e iconos -->
+            <div class="header-row">
+                <button class="profile-btn" id="profile-btn" title="Mi cuenta">
+                    <img src="/static/profile.jpg" alt="Perfil" class="profile-img">
+                </button>
+                <div class="header-actions">
+                    <button class="wake-word-toggle" id="wake-word-btn" title="Activar Hola, Novia">
+                        <i class="ph ph-microphone-slash"></i>
+                        <span class="wake-word-label">Hola, Novia · off</span>
+                    </button>
+                    <button class="header-icon-btn" id="faq-btn" title="Preguntas frecuentes">
+                        <i class="ph ph-question"></i>
+                    </button>
+                    <button class="header-icon-btn" id="catalog-btn" title="Catálogos">
+                        <i class="ph ph-book-open"></i>
+                    </button>
+                    <button class="header-icon-btn" id="logout-btn" title="Cerrar sesión">
+                        <i class="ph ph-sign-out"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Saludo -->
+            <div class="greeting-section">
+                <h1 class="greeting-title">Hola, José Luis <i class="ph ph-hand-waving wave"></i></h1>
+            </div>
+
+            <!-- Bento Card Grid -->
+            <div class="bento-grid">
+                <!-- Card 1: Estado de ánimo (tall, izquierda) -->
+                <button class="bento-card bento-card--mood" id="mood-card">
+                    <svg class="mood-face" viewBox="0 0 100 100" aria-hidden="true">
+                        <ellipse cx="32" cy="42" rx="12" ry="11" fill="currentColor"/>
+                        <ellipse cx="68" cy="42" rx="12" ry="11" fill="currentColor"/>
+                        <path d="M42 68 Q50 78 58 68" stroke="currentColor" stroke-width="4" stroke-linecap="round" fill="none"/>
+                    </svg>
+                    <span class="bento-card__title">¿Cómo te encuentras hoy?</span>
+                </button>
+
+                <!-- Card 2: Orb + Voice (derecha arriba) -->
+                <button class="bento-card bento-card--voice" id="orb-card">
+                    <div id="orb-container" class="orb-container"></div>
+                    <span class="bento-card__title">Habla conmigo</span>
+                </button>
+
+                <!-- Card 3: Plan diario (derecha abajo) -->
+                <button class="bento-card bento-card--plan" id="plan-card">
+                    <svg class="plan-icon" viewBox="0 0 100 100" aria-hidden="true">
+                        <!-- Clipboard base -->
+                        <rect x="18" y="20" width="64" height="72" rx="10" ry="10" fill="none" stroke="currentColor" stroke-width="5"/>
+                        <!-- Clip top -->
+                        <rect x="34" y="12" width="32" height="16" rx="6" ry="6" fill="currentColor" opacity="0.5"/>
+                        <!-- Check lines -->
+                        <line x1="32" y1="48" x2="48" y2="48" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+                        <line x1="32" y1="64" x2="54" y2="64" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+                        <line x1="32" y1="78" x2="42" y2="78" stroke="currentColor" stroke-width="5" stroke-linecap="round" opacity="0.4"/>
+                        <!-- Checkmark -->
+                        <polyline points="58,44 64,50 76,38" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="bento-card__title">Mis tareas</span>
+                </button>
+            </div>
+
+            <!-- Barra de búsqueda -->
+            <div class="search-container">
+                <button class="search-icon-btn" title="Buscar">
+                    <i class="ph ph-magnifying-glass"></i>
+                </button>
+                <input
+                    type="text"
+                    id="message-input"
+                    class="search-input"
+                    placeholder="Busca lo que quieras..."
+                    autocomplete="off"
+                >
+            </div>
+
+            <!-- Búsquedas recientes -->
+            <section class="recent-searches" id="recent-searches">
+                <h2 class="recent-searches__title">Búsquedas recientes</h2>
+                <p class="recent-searches__empty-msg" id="recent-searches-empty">Aquí aparecerán tus búsquedas recientes</p>
+                <div class="recent-searches__list" id="recent-searches-list">
+                    <!-- Se renderiza dinámicamente desde JS -->
+                </div>
+            </section>
+
+            <!-- Preguntas Frecuentes por Agente -->
+            <section class="faq-section" id="faq-section">
+                <h2 class="faq-section__title">Preguntas frecuentes</h2>
+                <p class="faq-section__desc">Cada tema es atendido por un agente especializado. Elige una categoría para encontrar respuestas rápidas.</p>
+
+                <!-- Productos -->
+                <div class="faq-category">
+                    <h3 class="faq-category__label">
+                        <i class="ph ph-package"></i>
+                        Productos
+                    </h3>
+                    <div class="faq-chips">
+                        <button class="faq-chip" data-question="¿Qué es BioPRO y para qué sirve?">BioPRO - qué es</button>
+                        <button class="faq-chip" data-question="¿Cuál es la diferencia entre FBio DVS Light, Medium y Volume?">Light vs Medium vs Volume</button>
+                        <button class="faq-chip" data-question="¿Por qué la tecnología DVS es mejor que BDDE?">DVS vs BDDE</button>
+                        <button class="faq-chip" data-question="¿Cómo se aplica el protocolo V-Lift?">Protocolo V-Lift</button>
+                    </div>
+                </div>
+
+                <!-- Objeciones -->
+                <div class="faq-category">
+                    <h3 class="faq-category__label">
+                        <i class="ph ph-shield"></i>
+                        Objeciones
+                    </h3>
+                    <div class="faq-chips">
+                        <button class="faq-chip" data-question="El doctor dice que Novacutan es muy caro, ¿cómo respondo?">El médico dice que es caro</button>
+                        <button class="faq-chip" data-question="El doctor ya usa otra marca y está contento, ¿cómo lo convenzo?">Ya usa otra marca</button>
+                        <button class="faq-chip" data-question="El doctor no conoce la marca Novacutan, ¿cómo la presento?">No conoce la marca</button>
+                        <button class="faq-chip" data-question="Compara BioPRO con Profhilo">BioPRO vs Profhilo</button>
+                    </div>
+                </div>
+
+                <!-- Argumentos de venta -->
+                <div class="faq-category">
+                    <h3 class="faq-category__label">
+                        <i class="ph ph-trend-up"></i>
+                        Argumentos de venta
+                    </h3>
+                    <div class="faq-chips">
+                        <button class="faq-chip" data-question="¿Cómo presento Novacutan a un dermatólogo?">Presentar a dermatólogo</button>
+                        <button class="faq-chip" data-question="¿Cómo presento Novacutan a un cirujano plástico?">Argumentos cirujano plástico</button>
+                        <button class="faq-chip" data-question="Dame el pitch de 30 segundos de BioPRO">Pitch 30 segundos</button>
+                        <button class="faq-chip" data-question="¿Qué hace único a Novacutan frente a la competencia?">¿Qué nos hace únicos?</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- ============================================
+             PANTALLA DE CHAT
+             ============================================ -->
+        <main class="chat-screen hidden" id="chat-screen">
+            <!-- Header del chat -->
+            <div class="chat-header">
+                <button class="back-btn" id="back-btn" title="Volver">
+                    <i class="ph ph-arrow-left"></i>
+                </button>
+                <div id="orb-container-chat-header" class="orb-container-chat-header"></div>
+                <div class="chat-title">
+                    <span class="chat-title-text">Novia</span>
+                    <span class="chat-status" id="chat-status">En línea</span>
+                </div>
+                <div class="header-actions">
+                    <button class="wake-word-toggle" id="chat-wake-word-btn" title="Activar Hola, Novia">
+                        <i class="ph ph-microphone-slash"></i>
+                        <span class="wake-word-label">Hola, Novia · off</span>
+                    </button>
+                    <button class="header-icon-btn" id="chat-faq-btn" title="Preguntas frecuentes">
+                        <i class="ph ph-question"></i>
+                    </button>
+                    <button class="header-icon-btn" id="chat-logout-btn" title="Cerrar sesión">
+                        <i class="ph ph-sign-out"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mensajes del chat -->
+            <div class="chat-messages" id="chat-messages">
+                <!-- Los mensajes se añaden dinámicamente -->
+            </div>
+
+            <!-- Input del chat — estilo Claude: input arriba, botones abajo -->
+            <div class="chat-input-container">
+                <!-- Input de texto principal -->
+                <div class="chat-input-row">
+                    <textarea
+                        id="chat-input"
+                        class="chat-textarea"
+                        placeholder="Escribe tu mensaje..."
+                        rows="1"
+                        autocomplete="off"
+                    ></textarea>
+                    <button class="chat-send-btn" id="chat-send-btn" title="Enviar">
+                        <i class="ph ph-paper-plane-tilt"></i>
+                    </button>
+                </div>
+                <!-- Botones de acción -->
+                <div class="chat-actions-row">
+                    <button class="chat-action-btn" id="chat-photo-btn" title="Subir imagen">
+                        <i class="ph ph-camera"></i>
+                        <span class="chat-action-label">Imagen</span>
+                    </button>
+                    <button class="chat-action-btn" id="chat-mic-btn" title="Grabar voz">
+                        <i class="ph ph-microphone"></i>
+                        <span class="chat-action-label">Hablar</span>
+                    </button>
+                    <button class="chat-action-btn chat-action-btn--voice" id="chat-voice-btn" title="Voz de Novia">
+                        <i class="ph-bold ph-waveform"></i>
+                        <span class="chat-action-label">Voz IA</span>
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <!-- ============================================
+             PANTALLA DE PLAN
+             ============================================ -->
+        <main class="plan-screen hidden" id="plan-screen">
+            <!-- Contenido scrollable -->
+            <div class="plan-body">
+                <!-- Header limpio (mismo estilo que welcome) -->
+                <div class="header-row">
+                    <button class="header-icon-btn" id="plan-back-btn" title="Volver">
+                        <i class="ph ph-arrow-left"></i>
+                    </button>
+                    <div class="header-actions">
+                        <button class="header-icon-btn" id="plan-faq-btn" title="Preguntas frecuentes">
+                            <i class="ph ph-question"></i>
+                        </button>
+                        <button class="header-icon-btn" id="plan-catalog-btn" title="Catálogos">
+                            <i class="ph ph-book-open"></i>
+                        </button>
+                        <button class="header-icon-btn" id="plan-logout-btn" title="Cerrar sesión">
+                            <i class="ph ph-sign-out"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Título tipo greeting -->
+                <div class="greeting-section">
+                    <h1 class="greeting-title">Tu plan, José Luis</h1>
+                </div>
+                <!-- Filtro Overview -->
+                <div class="plan-overview-filter">
+                    <button class="plan-filter-chip active" data-filter="hoy">Hoy</button>
+                    <button class="plan-filter-chip" data-filter="semana">Esta semana</button>
+                    <button class="plan-filter-chip" data-filter="quincena">Esta quincena</button>
+                </div>
+
+                <!-- Grid de estadísticas -->
+                <div class="plan-stats-grid">
+                    <div class="plan-stat-card plan-stat--in-progress">
+                        <span class="plan-stat__number" id="stat-in-progress">3</span>
+                        <svg class="plan-stat__sparkline" viewBox="0 0 60 24" aria-hidden="true">
+                            <polyline points="0,18 10,12 20,16 30,8 40,14 50,6 60,10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="plan-stat__label">En proceso</span>
+                        <i class="ph ph-caret-right plan-stat__arrow"></i>
+                    </div>
+                    <div class="plan-stat-card plan-stat--todo">
+                        <span class="plan-stat__number" id="stat-todo">5</span>
+                        <svg class="plan-stat__sparkline" viewBox="0 0 60 24" aria-hidden="true">
+                            <polyline points="0,10 10,14 20,8 30,18 40,12 50,16 60,6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="plan-stat__label">Por hacer</span>
+                        <i class="ph ph-caret-right plan-stat__arrow"></i>
+                    </div>
+                    <div class="plan-stat-card plan-stat--overdue">
+                        <span class="plan-stat__number" id="stat-overdue">2</span>
+                        <svg class="plan-stat__sparkline" viewBox="0 0 60 24" aria-hidden="true">
+                            <polyline points="0,6 10,10 20,14 30,12 40,18 50,16 60,20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="plan-stat__label">Retrasadas</span>
+                        <i class="ph ph-caret-right plan-stat__arrow"></i>
+                    </div>
+                    <div class="plan-stat-card plan-stat--projects">
+                        <span class="plan-stat__number" id="stat-projects">3</span>
+                        <svg class="plan-stat__sparkline" viewBox="0 0 60 24" aria-hidden="true">
+                            <polyline points="0,14 10,8 20,12 30,6 40,10 50,8 60,4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="plan-stat__label">Proyectos</span>
+                        <i class="ph ph-caret-right plan-stat__arrow"></i>
+                    </div>
+                    <div class="plan-stat-card plan-stat--total">
+                        <span class="plan-stat__number" id="stat-total">13</span>
+                        <svg class="plan-stat__sparkline" viewBox="0 0 60 24" aria-hidden="true">
+                            <polyline points="0,16 10,10 20,14 30,8 40,6 50,12 60,4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="plan-stat__label">Total tareas</span>
+                        <i class="ph ph-caret-right plan-stat__arrow"></i>
+                    </div>
+                </div>
+
+                <!-- Sección Tareas -->
+                <div class="plan-tasks-section">
+                    <h2 class="plan-tasks__title">Tareas</h2>
+
+                    <!-- Filtros de tareas -->
+                    <div class="plan-tasks-filters">
+                        <select class="plan-tasks-filter" id="filter-project">
+                            <option value="all">Todos los proyectos</option>
+                            <option value="visitas">Visitas médicas</option>
+                            <option value="formacion">Formación</option>
+                            <option value="admin">Administración</option>
+                        </select>
+                        <select class="plan-tasks-filter" id="filter-time">
+                            <option value="hoy">Hoy</option>
+                            <option value="semana">Esta semana</option>
+                            <option value="quincena">Esta quincena</option>
+                        </select>
+                        <select class="plan-tasks-filter" id="filter-status">
+                            <option value="all">Todos los estados</option>
+                            <option value="in_progress">En proceso</option>
+                            <option value="todo">Por hacer</option>
+                            <option value="overdue">Retrasadas</option>
+                            <option value="done">Completadas</option>
+                        </select>
+                    </div>
+
+                    <!-- Lista de tareas — se renderiza dinámicamente desde JS -->
+                    <div class="plan-tasks-list" id="plan-tasks-list"></div>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation Bar -->
+            <nav class="plan-bottom-nav">
+                <button class="plan-nav-btn" id="nav-chat-btn" title="Chat">
+                    <i class="ph ph-chat-circle"></i>
+                </button>
+                <button class="plan-nav-btn" id="nav-add-task" title="Nueva tarea" disabled>
+                    <i class="ph ph-plus"></i>
+                </button>
+                <button class="plan-nav-btn plan-nav-btn--orb" id="nav-orb" title="Habla conmigo">
+                    <div id="orb-container-nav" class="orb-container-nav"></div>
+                </button>
+                <button class="plan-nav-btn" id="nav-list" title="Lista" disabled>
+                    <i class="ph ph-list-checks"></i>
+                </button>
+                <button class="plan-nav-btn" id="nav-calendar" title="Calendario" disabled>
+                    <i class="ph ph-calendar"></i>
+                </button>
+            </nav>
+        </main>
+
+        <!-- ============================================
+             MOOD SELECTOR OVERLAY
+             ============================================ -->
+        <div class="mood-overlay hidden" id="mood-overlay" role="dialog" aria-modal="true" aria-labelledby="mood-question">
+            <!-- Top bar -->
+            <div class="mood-overlay__topbar">
+                <button class="mood-overlay__close" id="mood-close-btn" title="Cerrar" aria-label="Cerrar">
+                    <i class="ph ph-x"></i>
+                </button>
+                <button class="mood-overlay__info" id="mood-info-btn" title="Información" aria-label="Información">
+                    <i class="ph ph-info"></i>
+                </button>
+            </div>
+
+            <!-- Pregunta -->
+            <h2 class="mood-overlay__question" id="mood-question">¿Cómo te encuentras hoy?</h2>
+
+            <!-- Cara animada grande -->
+            <div class="mood-overlay__face-container">
+                <svg class="mood-overlay__face" id="mood-face-svg" viewBox="0 0 100 100" aria-hidden="true">
+                    <ellipse id="mood-eye-left" cx="32" cy="42" rx="12" ry="11" fill="currentColor"/>
+                    <ellipse id="mood-eye-right" cx="68" cy="42" rx="12" ry="11" fill="currentColor"/>
+                    <path id="mood-mouth" d="M42 68 Q50 78 58 68" stroke="currentColor" stroke-width="4" stroke-linecap="round" fill="none"/>
+                </svg>
+            </div>
+
+            <!-- Label del mood -->
+            <span class="mood-overlay__label" id="mood-label">BIEN</span>
+
+            <!-- Slider -->
+            <div class="mood-overlay__slider-container">
+                <div class="mood-overlay__slider-track">
+                    <input
+                        type="range"
+                        id="mood-slider"
+                        class="mood-overlay__slider"
+                        min="0"
+                        max="100"
+                        value="100"
+                        step="1"
+                    >
+                </div>
+                <div class="mood-overlay__slider-labels">
+                    <span class="mood-overlay__slider-endpoint">Mal</span>
+                    <span class="mood-overlay__slider-endpoint">No muy bien</span>
+                    <span class="mood-overlay__slider-endpoint">Bien</span>
+                </div>
+            </div>
+
+            <!-- Enviar -->
+            <button class="mood-overlay__submit" id="mood-submit-btn">Enviar</button>
+
+            <!-- Reacción AI -->
+            <p class="mood-overlay__reaction" id="mood-reaction"></p>
+        </div>
+    </div>
+
+    <!-- Markdown rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/marked@17.0.1/lib/marked.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.3.1/dist/purify.min.js"></script>
+    <!-- HTML to Canvas (infographic PNG export) -->
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <!-- Orb 3D Canvas -->
+    <script src="/static/orb.js"></script>
+    <script src="/static/app.js?v=5.1.1"></script>
+</body>
+</html>

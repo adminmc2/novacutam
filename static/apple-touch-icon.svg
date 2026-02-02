@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
+  <defs>
+    <linearGradient id="bg180" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5F2FC"/>
+      <stop offset="100%" stop-color="#EAE7F1"/>
+    </linearGradient>
+    <radialGradient id="glow180" cx="50%" cy="50%" r="50%">
+      <stop offset="50%" stop-color="#31BEEF" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#31BEEF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Fondo -->
+  <rect width="180" height="180" fill="url(#bg180)"/>
+
+  <!-- Glow -->
+  <circle cx="90" cy="90" r="75" fill="url(#glow180)"/>
+
+  <!-- Partículas del orb - Capa trasera -->
+  <circle cx="55" cy="65" r="4" fill="#994E95" opacity="0.35"/>
+  <circle cx="125" cy="60" r="3.5" fill="#A1B8F2" opacity="0.3"/>
+  <circle cx="105" cy="115" r="4" fill="#31BEEF" opacity="0.35"/>
+  <circle cx="45" cy="100" r="3" fill="#994E95" opacity="0.3"/>
+  <circle cx="130" cy="105" r="3.5" fill="#A1B8F2" opacity="0.35"/>
+  <circle cx="70" cy="125" r="3" fill="#31BEEF" opacity="0.3"/>
+
+  <!-- Capa media -->
+  <circle cx="65" cy="55" r="5" fill="#31BEEF" opacity="0.55"/>
+  <circle cx="115" cy="75" r="4.5" fill="#A1B8F2" opacity="0.5"/>
+  <circle cx="75" cy="100" r="5.5" fill="#994E95" opacity="0.55"/>
+  <circle cx="50" cy="82" r="4" fill="#31BEEF" opacity="0.45"/>
+  <circle cx="120" cy="108" r="4" fill="#A1B8F2" opacity="0.5"/>
+  <circle cx="90" cy="60" r="4.5" fill="#994E95" opacity="0.45"/>
+  <circle cx="60" cy="110" r="4" fill="#31BEEF" opacity="0.5"/>
+  <circle cx="125" cy="85" r="4" fill="#A1B8F2" opacity="0.45"/>
+
+  <!-- Capa frontal (más grandes, más brillantes) -->
+  <circle cx="72" cy="78" r="7" fill="#31BEEF" opacity="0.8"/>
+  <circle cx="102" cy="88" r="6" fill="#A1B8F2" opacity="0.75"/>
+  <circle cx="62" cy="95" r="5.5" fill="#994E95" opacity="0.7"/>
+  <circle cx="108" cy="68" r="5" fill="#31BEEF" opacity="0.75"/>
+  <circle cx="85" cy="108" r="6.5" fill="#A1B8F2" opacity="0.8"/>
+  <circle cx="118" cy="92" r="5" fill="#994E95" opacity="0.65"/>
+  <circle cx="68" cy="115" r="4.5" fill="#31BEEF" opacity="0.7"/>
+  <circle cx="95" cy="72" r="5.5" fill="#A1B8F2" opacity="0.75"/>
+  <circle cx="80" cy="85" r="6" fill="#994E95" opacity="0.75"/>
+  <circle cx="112" cy="100" r="5" fill="#31BEEF" opacity="0.7"/>
+  <circle cx="58" cy="72" r="4.5" fill="#A1B8F2" opacity="0.65"/>
+  <circle cx="98" cy="115" r="5" fill="#994E95" opacity="0.7"/>
+
+  <!-- Brillos blancos (efecto gota de agua) -->
+  <circle cx="70" cy="75" r="3" fill="#FFFFFF" opacity="0.9"/>
+  <circle cx="95" cy="82" r="2.5" fill="#FFFFFF" opacity="0.85"/>
+  <circle cx="78" cy="92" r="2" fill="#FFFFFF" opacity="0.8"/>
+  <circle cx="105" cy="65" r="2" fill="#FFFFFF" opacity="0.75"/>
+  <circle cx="62" cy="88" r="1.8" fill="#FFFFFF" opacity="0.7"/>
+  <circle cx="88" cy="70" r="2.2" fill="#FFFFFF" opacity="0.8"/>
+</svg>

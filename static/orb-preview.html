@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orb - Elige tu estilo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Source Sans 3', sans-serif;
+            background: #F5F3FA;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px 20px;
+        }
+        h1 {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 1.5rem;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+        }
+        p.sub {
+            color: #6b6b6b;
+            margin-bottom: 30px;
+            font-size: 0.95rem;
+        }
+        .options {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .option {
+            background: white;
+            border-radius: 20px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 3px solid transparent;
+        }
+        .option:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+        }
+        .option.selected {
+            border-color: #31BEEF;
+        }
+        .option h2 {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 1.1rem;
+            color: #1a1a1a;
+            margin-top: 16px;
+            margin-bottom: 4px;
+        }
+        .option p {
+            color: #6b6b6b;
+            font-size: 0.85rem;
+            text-align: center;
+            max-width: 180px;
+        }
+        canvas {
+            display: block;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Elige el movimiento del Orb</h1>
+    <p class="sub">Haz clic en cada orb para ver el estado "listening"</p>
+    <div class="options">
+        <div class="option" id="opt-a">
+            <canvas id="orb-a" width="180" height="180" style="width:180px;height:180px"></canvas>
+            <h2>A) Brisa suave</h2>
+            <p>Movimiento fluido medio, las gotas flotan suavemente</p>
+        </div>
+        <div class="option" id="opt-b">
+            <canvas id="orb-b" width="180" height="180" style="width:180px;height:180px"></canvas>
+            <h2>B) Oleaje vivo</h2>
+            <p>Movimiento notable, las gotas ondean y respiran con energia</p>
+        </div>
+        <div class="option" id="opt-c">
+            <canvas id="orb-c" width="180" height="180" style="width:180px;height:180px"></canvas>
+            <h2>C) Tormenta liquida</h2>
+            <p>Movimiento intenso, particulas en flujo constante y expresivo</p>
+        </div>
+    </div>
+
+<script>
+(function() {
+    const COLORS = [
+        { r: 49, g: 190, b: 239 },
+        { r: 153, g: 78, b: 149 },
+        { r: 161, g: 184, b: 242 },
+    ];
+
+    function lerpColor(c1, c2, t) {
+        return {
+            r: Math.round(c1.r + (c2.r - c1.r) * t),
+            g: Math.round(c1.g + (c2.g - c1.g) * t),
+            b: Math.round(c1.b + (c2.b - c1.b) * t),
+        };
+    }
+
+    function getCyclicColor(time, offset) {
+        const speed = 0.3;
+        const t = ((time * speed + offset) % 3 + 3) % 3;
+        const idx = Math.floor(t);
+        const frac = t - idx;
+        return lerpColor(COLORS[idx % 3], COLORS[(idx + 1) % 3], frac);
+    }
+
+    // Configuraciones para cada propuesta
+    const PRESETS = {
+        // A) Brisa suave - movimiento medio
+        a: {
+            idlePhiAmp: 0.08,        // amplitud oscilación phi
+            idlePhiSpeed: 0.6,       // velocidad oscilación phi
+            idleThetaAmp: 0.06,      // amplitud oscilación theta
+            idleThetaSpeed: 0.4,     // velocidad oscilación theta
+            idleRotSpeed: 0.15,      // velocidad rotación esfera
+            idleDropAmp: 0.05,       // amplitud efecto gota
+            // listening
+            listenPhiAmp: 0.2,
+            listenPhiSpeed: 1.8,
+            listenThetaSpeed: 1.0,
+            listenThetaAmp: 0.15,
+            listenRotSpeed: 0.7,
+            listenDropAmp: 0.1,
+        },
+        // B) Oleaje vivo - movimiento notable
+        b: {
+            idlePhiAmp: 0.15,
+            idlePhiSpeed: 0.9,
+            idleThetaAmp: 0.12,
+            idleThetaSpeed: 0.6,
+            idleRotSpeed: 0.25,
+            idleDropAmp: 0.08,
+            // listening
+            listenPhiAmp: 0.3,
+            listenPhiSpeed: 2.2,
+            listenThetaSpeed: 1.4,
+            listenThetaAmp: 0.2,
+            listenRotSpeed: 1.0,
+            listenDropAmp: 0.15,
+        },
+        // C) Tormenta liquida - movimiento intenso
+        c: {
+            idlePhiAmp: 0.25,
+            idlePhiSpeed: 1.3,
+            idleThetaAmp: 0.2,
+            idleThetaSpeed: 0.9,
+            idleRotSpeed: 0.4,
+            idleDropAmp: 0.12,
+            // listening
+            listenPhiAmp: 0.45,
+            listenPhiSpeed: 2.8,
+            listenThetaSpeed: 2.0,
+            listenThetaAmp: 0.3,
+            listenRotSpeed: 1.5,
+            listenDropAmp: 0.2,
+        }
+    };
+
+    class Particle {
+        constructor(index, total) {
+            const phi = Math.acos(1 - 2 * (index + 0.5) / total);
+            const theta = Math.PI * (1 + Math.sqrt(5)) * index;
+            this.basePhi = phi;
+            this.baseTheta = theta;
+            this.phi = phi;
+            this.theta = theta;
+            this.colorOffset = Math.random() * 3;
+            this.baseSize = 1.5 + Math.random() * 2.5;
+            this.baseAlpha = 0.5 + Math.random() * 0.5;
+            this.radiusOffset = Math.random() * Math.PI * 2;
+            this.radiusSpeed = 0.5 + Math.random() * 1.5;
+        }
+
+        update(time, listening, preset) {
+            if (listening) {
+                this.phi = this.basePhi + Math.sin(time * preset.listenPhiSpeed + this.radiusOffset) * preset.listenPhiAmp;
+                this.theta = this.baseTheta + time * preset.listenThetaSpeed + Math.cos(time * 2.5 + this.radiusOffset) * preset.listenThetaAmp;
+            } else {
+                this.phi = this.basePhi + Math.sin(time * preset.idlePhiSpeed + this.radiusOffset) * preset.idlePhiAmp;
+                this.theta = this.baseTheta + Math.sin(time * preset.idleThetaSpeed + this.colorOffset) * preset.idleThetaAmp;
+            }
+        }
+
+        getPosition(radius) {
+            return {
+                x: radius * Math.sin(this.phi) * Math.cos(this.theta),
+                y: radius * Math.cos(this.phi),
+                z: radius * Math.sin(this.phi) * Math.sin(this.theta)
+            };
+        }
+    }
+
+    class Orb {
+        constructor(canvas, size, preset) {
+            this.canvas = canvas;
+            this.ctx = canvas.getContext('2d');
+            this.size = size;
+            this.preset = preset;
+            this.listening = false;
+
+            const dpr = window.devicePixelRatio || 1;
+            canvas.width = size * dpr;
+            canvas.height = size * dpr;
+            canvas.style.width = size + 'px';
+            canvas.style.height = size + 'px';
+            this.ctx.scale(dpr, dpr);
+
+            this.centerX = size / 2;
+            this.centerY = size / 2;
+            this.radius = size * 0.32;
+
+            this.particles = [];
+            for (let i = 0; i < 200; i++) {
+                this.particles.push(new Particle(i, 200));
+            }
+
+            this.time = Math.random() * 100;
+            this.rotationY = 0;
+            this.running = true;
+            this.lastTime = performance.now();
+            this.loop();
+        }
+
+        loop() {
+            if (!this.running) return;
+            const now = performance.now();
+            const dt = (now - this.lastTime) / 1000;
+            this.lastTime = now;
+            this.time += dt;
+
+            const p = this.preset;
+            this.rotationY += dt * (this.listening ? p.listenRotSpeed : p.idleRotSpeed);
+
+            this.draw();
+            requestAnimationFrame(() => this.loop());
+        }
+
+        draw() {
+            const ctx = this.ctx;
+            const { centerX, centerY, radius, size, preset } = this;
+
+            ctx.clearRect(0, 0, size, size);
+
+            // Glow
+            const glowColor = getCyclicColor(this.time, 0);
+            const glowAlpha = this.listening ? 0.18 : 0.1;
+            const glow = ctx.createRadialGradient(centerX, centerY, radius * 0.2, centerX, centerY, radius * 1.4);
+            glow.addColorStop(0, `rgba(${glowColor.r}, ${glowColor.g}, ${glowColor.b}, ${glowAlpha})`);
+            glow.addColorStop(1, 'rgba(0, 0, 0, 0)');
+            ctx.fillStyle = glow;
+            ctx.fillRect(0, 0, size, size);
+
+            const projected = [];
+            const cosR = Math.cos(this.rotationY);
+            const sinR = Math.sin(this.rotationY);
+            const dropAmp = this.listening ? preset.listenDropAmp : preset.idleDropAmp;
+
+            for (const p of this.particles) {
+                p.update(this.time, this.listening, preset);
+                const pos = p.getPosition(radius);
+                const rx = pos.x * cosR - pos.z * sinR;
+                const rz = pos.x * sinR + pos.z * cosR;
+                const ry = pos.y;
+                const dropEffect = 1 + Math.sin(this.time * p.radiusSpeed + p.radiusOffset) * dropAmp;
+
+                projected.push({
+                    x: centerX + rx * dropEffect,
+                    y: centerY + ry * dropEffect,
+                    z: rz,
+                    depth: (rz / radius + 1) / 2,
+                    particle: p
+                });
+            }
+
+            projected.sort((a, b) => a.z - b.z);
+
+            for (const pp of projected) {
+                const p = pp.particle;
+                const color = getCyclicColor(this.time, p.colorOffset);
+                const depthScale = 0.4 + pp.depth * 0.6;
+                const sizeMultiplier = this.listening ? 1.3 : 1;
+                const dotSize = p.baseSize * depthScale * sizeMultiplier;
+                const alpha = p.baseAlpha * (0.3 + pp.depth * 0.7) * (this.listening ? 1 : 0.85);
+
+                ctx.beginPath();
+                ctx.arc(pp.x, pp.y, dotSize, 0, Math.PI * 2);
+
+                const gradient = ctx.createRadialGradient(
+                    pp.x - dotSize * 0.3, pp.y - dotSize * 0.3, 0,
+                    pp.x, pp.y, dotSize
+                );
+                gradient.addColorStop(0, `rgba(255, 255, 255, ${alpha * 0.9})`);
+                gradient.addColorStop(0.3, `rgba(${color.r}, ${color.g}, ${color.b}, ${alpha})`);
+                gradient.addColorStop(1, `rgba(${color.r}, ${color.g}, ${color.b}, ${alpha * 0.3})`);
+
+                ctx.fillStyle = gradient;
+                ctx.fill();
+            }
+        }
+    }
+
+    // Crear los 3 orbs
+    const orbA = new Orb(document.getElementById('orb-a'), 180, PRESETS.a);
+    const orbB = new Orb(document.getElementById('orb-b'), 180, PRESETS.b);
+    const orbC = new Orb(document.getElementById('orb-c'), 180, PRESETS.c);
+
+    // Click para toggle listening en cada uno
+    function setupToggle(el, orb) {
+        el.addEventListener('click', () => {
+            orb.listening = !orb.listening;
+        });
+    }
+
+    setupToggle(document.getElementById('opt-a'), orbA);
+    setupToggle(document.getElementById('opt-b'), orbB);
+    setupToggle(document.getElementById('opt-c'), orbC);
+})();
+</script>
+</body>
+</html>

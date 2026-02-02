@@ -1,0 +1,1044 @@
+{
+  "metadata": {
+    "empresa": "Novacutan",
+    "version": "1.0",
+    "fecha_creacion": "2026-02-03",
+    "total_preguntas": 170,
+    "categorias": [
+      "empresa_marca",
+      "tecnologia_dvs",
+      "productos_biopro",
+      "productos_fbio_dvs",
+      "protocolos_aplicacion",
+      "comparativas_competencia",
+      "objeciones",
+      "argumentos_venta",
+      "seguridad_contraindicaciones",
+      "complicaciones",
+      "cuidados_post",
+      "zonas_tecnicas"
+    ]
+  },
+  "qa_pairs": [
+    {
+      "id": 1,
+      "categoria": "empresa_marca",
+      "pregunta": "¿Qué es Novacutan?",
+      "respuesta": "Novacutan es la marca de Laboratoires Fijie France, con sede en París y más de 10 años de experiencia en medicina estética inyectable. Fabricación en República de Corea según normas GMP. Distribuido en más de 30 países."
+    },
+    {
+      "id": 2,
+      "categoria": "empresa_marca",
+      "pregunta": "¿Quién fabrica Novacutan?",
+      "respuesta": "Novacutan es fabricado en la República de Corea bajo normas GMP y distribuido por Laboratoires Fijie France, con sede en París, Francia."
+    },
+    {
+      "id": 3,
+      "categoria": "empresa_marca",
+      "pregunta": "¿Cuáles son los productos de Novacutan?",
+      "respuesta": "Novacutan tiene 4 productos: BioPRO (biomodulador de 2ml), FBio DVS Light (relleno 1ml), FBio DVS Medium (relleno 1ml) y FBio DVS Volume (relleno 1ml). Todos utilizan ácido hialurónico de 20mg/ml con tecnología DVS."
+    },
+    {
+      "id": 4,
+      "categoria": "empresa_marca",
+      "pregunta": "¿Qué certificaciones tiene Novacutan?",
+      "respuesta": "Todos los productos Novacutan tienen Marcado CE, clasificación como Dispositivo Médico Clase III. BioPRO registrado desde 2019, FBio DVS desde 2014. Fabricación según normas GMP."
+    },
+    {
+      "id": 5,
+      "categoria": "empresa_marca",
+      "pregunta": "¿Cuál es el eslogan de Novacutan?",
+      "respuesta": "Novacutan se posiciona como tecnología exclusiva 3DVS para medicina estética, con el concepto de triple acción celular única en el mercado."
+    },
+    {
+      "id": 6,
+      "categoria": "tecnologia_dvs",
+      "pregunta": "¿Qué es la tecnología 3DVS?",
+      "respuesta": "3DVS significa 3* Design Visual System. Crea microesferas tridimensionales con estructura porosa que permite una mejor integración en la matriz extracelular y resultados más naturales. Es la tecnología exclusiva de Novacutan."
+    },
+    {
+      "id": 7,
+      "categoria": "tecnologia_dvs",
+      "pregunta": "¿Qué es el reticulante DVS?",
+      "respuesta": "DVS es Divinilsulfona, un agente reticulante con peso molecular de 118.15 Dalton (más pequeño que el BDDE de 202.25 Dalton). Crea puentes más estrechos y estables entre las moléculas de ácido hialurónico, resultando en microesferas 3D porosas."
+    },
+    {
+      "id": 8,
+      "categoria": "tecnologia_dvs",
+      "pregunta": "¿Qué es la triple acción celular?",
+      "respuesta": "BioPRO es el único biomodulador que actúa en 3 niveles simultáneamente: Nivel extracelular (regenera la matriz), Nivel intracelular (hidrata las células), y Nivel subcelular (activa la producción de ATP en las mitocondrias)."
+    },
+    {
+      "id": 9,
+      "categoria": "tecnologia_dvs",
+      "pregunta": "¿Cómo es la purificación del ácido hialurónico?",
+      "respuesta": "Novacutan utiliza purificación anfifílica en 3 etapas: 1) Filtro de polímero para sustancias hidrófobas, 2) Filtro selectivo para sustancias hidrófilas, 3) Repetición múltiple para máxima pureza. El resultado es ácido hialurónico ultrapuro."
+    },
+    {
+      "id": 10,
+      "categoria": "tecnologia_dvs",
+      "pregunta": "¿Qué peso molecular tiene el ácido hialurónico?",
+      "respuesta": "Todos los productos Novacutan usan ácido hialurónico de alto peso molecular (14KD), de origen por fermentación bacteriana (no animal), reticulado con DVS."
+    },
+    {
+      "id": 11,
+      "categoria": "tecnologia_dvs",
+      "pregunta": "¿Qué es la biodegradación por etapas?",
+      "respuesta": "El producto no se degrada todo de golpe. Se va degradando capa por capa: primero la superficie, luego las capas internas, finalmente el núcleo. Esto mantiene el efecto visible durante más tiempo, hasta 12+ meses."
+    },
+    {
+      "id": 12,
+      "categoria": "tecnologia_dvs",
+      "pregunta": "¿Por qué DVS produce menos edema?",
+      "respuesta": "La estructura más compacta creada por DVS absorbe menos agua que la estructura creada por BDDE. Los puentes más estrechos entre moléculas resultan en menor hinchazón post-tratamiento y menos tiempo de recuperación."
+    },
+    {
+      "id": 13,
+      "categoria": "productos_biopro",
+      "pregunta": "¿Qué es BioPRO?",
+      "respuesta": "NOVACUTAN BioPRO es un biomodulador de matriz celular con tecnología 3DVS. Actúa en tres niveles (extracelular, intracelular, subcelular). Presentación: jeringa de 2ml, 20mg/ml de ácido hialurónico de alto peso molecular reticulado con DVS. Incluye 2 agujas de 31G x 13mm."
+    },
+    {
+      "id": 14,
+      "categoria": "productos_biopro",
+      "pregunta": "¿Para qué sirve BioPRO?",
+      "respuesta": "BioPRO está indicado para lifting de tejidos blandos, mejora de óvalo facial, rejuvenecimiento, mejora de calidad de piel y prevención del envejecimiento. Se aplica con protocolos V-Lift (cánula) o D-Lift (aguja)."
+    },
+    {
+      "id": 15,
+      "categoria": "productos_biopro",
+      "pregunta": "¿Cuántas sesiones necesita BioPRO?",
+      "respuesta": "Tratamiento inicial: 3 sesiones de 2ml cada una, con intervalo de 3-4 semanas. Total ciclo inicial: 6ml. Mantenimiento: 1-2 sesiones al año cuando el efecto disminuya (generalmente 10-12 meses)."
+    },
+    {
+      "id": 16,
+      "categoria": "productos_biopro",
+      "pregunta": "¿Cuánto dura el efecto de BioPRO?",
+      "respuesta": "Los efectos de BioPRO duran 12+ meses gracias a la biodegradación por etapas y la estructura 3D de microesferas. Resultados progresivos: tras 1ª sesión (hidratación, luminosidad), tras 2ª (mejora textura, inicio lifting), tras 3ª (lifting completo, firmeza). Resultado óptimo a las 4 semanas post-ciclo."
+    },
+    {
+      "id": 17,
+      "categoria": "productos_biopro",
+      "pregunta": "¿Qué contiene la caja del BioPRO?",
+      "respuesta": "1 jeringa de 2ml con el producto, 2 agujas de 31G x 13mm, adhesivos de trazabilidad para médico y paciente, e instrucciones de uso."
+    },
+    {
+      "id": 18,
+      "categoria": "productos_biopro",
+      "pregunta": "¿Cuál es el pitch de 30 segundos de BioPRO?",
+      "respuesta": "\"Doctor, NOVACUTAN BioPRO es el único biomodulador de matriz celular con tecnología 3DVS que actúa en tres niveles: extracelular, intracelular y subcelular. A diferencia de otros productos, no solo hidrata, sino que regenera activamente la matriz y activa los fibroblastos para producir colágeno propio. Los resultados son naturales, duran más de 12 meses, y sus pacientes tendrán mínima hinchazón post-tratamiento. ¿Le gustaría ver los resultados del estudio clínico?\""
+    },
+    {
+      "id": 19,
+      "categoria": "productos_biopro",
+      "pregunta": "¿Qué hace único a BioPRO?",
+      "respuesta": "La triple acción celular: mientras otros biomoduladores actúan solo a nivel extracelular, BioPRO es el ÚNICO que penetra hasta el nivel subcelular, activando las mitocondrias y aumentando la producción de ATP. Esto significa regeneración real de los tejidos, activación de fibroblastos para producir colágeno, elastina y proteoglicanos propios, y efecto más duradero."
+    },
+    {
+      "id": 20,
+      "categoria": "productos_biopro",
+      "pregunta": "¿Por qué BioPRO es seguro?",
+      "respuesta": "Marcado CE, Dispositivo Médico Clase III, fabricación GMP, purificación anfifílica en 3 etapas. Estudio de citotoxicidad sin efectos tóxicos en células vivas tras 48 horas. Estudio clínico con 32 pacientes: eficacia y seguridad demostradas. Análisis Antera 3D y ultrasonido documentados."
+    },
+    {
+      "id": 21,
+      "categoria": "productos_fbio_dvs",
+      "pregunta": "¿Qué es FBio DVS Light?",
+      "respuesta": "FBio DVS Light es un relleno dérmico de ácido hialurónico de 1ml, 20mg/ml, reticulado con DVS. Indicado para zonas que requieren corrección sutil: surco lagrimal/ojeras, zona periorbital, contorno labial, arrugas peribucales, manos. Incluye 2 agujas de 30G x 13mm."
+    },
+    {
+      "id": 22,
+      "categoria": "productos_fbio_dvs",
+      "pregunta": "¿Qué es FBio DVS Medium?",
+      "respuesta": "FBio DVS Medium es un relleno dérmico de 1ml, 20mg/ml, reticulado con DVS. Indicado para surcos nasogenianos, volumen labial moderado, pómulos, zona temporal. Incluye 2 agujas de 27G x 13mm. Técnicas: linear retrotrazante o fanning."
+    },
+    {
+      "id": 23,
+      "categoria": "productos_fbio_dvs",
+      "pregunta": "¿Qué es FBio DVS Volume?",
+      "respuesta": "FBio DVS Volume es un relleno dérmico de 1ml, 20mg/ml con alta cohesividad, reticulado con DVS. Indicado para definición mandibular, mentón, ángulo mandibular, línea mandibular. Incluye 2 agujas de 25G x 13mm. Ideal para rostros masculinos por su capacidad de crear ángulos definidos."
+    },
+    {
+      "id": 24,
+      "categoria": "productos_fbio_dvs",
+      "pregunta": "¿Cuál es la diferencia entre Light, Medium y Volume?",
+      "respuesta": "Light: correcciones sutiles, zonas delicadas (ojeras, labios contorno, manos), aguja 30G. Medium: correcciones moderadas, surcos y volumen (nasogenianos, pómulos, labios volumen), aguja 27G. Volume: máxima proyección y estructura (mentón, mandíbula, ángulo mandibular), aguja 25G. Todos tienen 20mg/ml de AH reticulado con DVS."
+    },
+    {
+      "id": 25,
+      "categoria": "productos_fbio_dvs",
+      "pregunta": "¿Qué producto uso para labios?",
+      "respuesta": "Para labios: perfilado con FBio DVS Light (aguja 30G, 0.1-0.2ml por labio), cuerpo del labio con Light o Medium (27G-30G, 0.2-0.3ml por labio), arco de cupido con Light (30G, 0.05ml por pico). Primera vez: 0.5-1ml total. Máximo por sesión: 1.5ml. Proporción ideal: labio superior:inferior = 1:1.6."
+    },
+    {
+      "id": 26,
+      "categoria": "productos_fbio_dvs",
+      "pregunta": "¿Qué producto uso para ojeras?",
+      "respuesta": "Para surco lagrimal/ojeras usar FBio DVS Light. ZONA DE ALTO RIESGO. Obligatorio usar cánula 22G-50mm. Volumen: 0.2-0.5ml por lado máximo. Plano supraperióstico (sobre el hueso), NUNCA superficial (riesgo Tyndall). Técnica retrotrazante lenta con 0.05ml por punto."
+    },
+    {
+      "id": 27,
+      "categoria": "productos_fbio_dvs",
+      "pregunta": "¿Cuánto cuestan los productos Novacutan?",
+      "respuesta": "Tarifas PVP distribuidor: consultar tarifa vigente para cada producto. Descuentos por volumen: 10-19 unidades 5%, 20-49 unidades 10%, 50+ unidades 15%."
+    },
+    {
+      "id": 28,
+      "categoria": "protocolos_aplicacion",
+      "pregunta": "¿Cómo se aplica el protocolo V-Lift?",
+      "respuesta": "Producto: BioPRO 2ml. Instrumento: Cánula 22G-50mm o 22G-70mm. 4 puntos de entrada por lado: zona temporal, zona malar, zona preauricular, zona mandibular. Técnica fanning subdérmico. 3 sesiones cada 3-4 semanas. Preparación: limpieza, antisepsia, marcaje, anestesia tópica opcional. Realizar punto de entrada con aguja 18G, introducir cánula subdérmica, depositar 0.1-0.2ml por pasada."
+    },
+    {
+      "id": 29,
+      "categoria": "protocolos_aplicacion",
+      "pregunta": "¿Cómo se aplica el protocolo D-Lift?",
+      "respuesta": "Producto: BioPRO 2ml. Instrumento: Aguja 30G-13mm o 31G-13mm. 10-15 puntos totales: frontal (2-3), temporal (1-2 por lado), malar (2-3 por lado), mandibular (2-3 por lado), mentoniana (1-2). Inyección perpendicular o a 45°, profundidad subdérmica, 0.1-0.2ml por punto. Más rápido que V-Lift, ideal para mantenimiento."
+    },
+    {
+      "id": 30,
+      "categoria": "protocolos_aplicacion",
+      "pregunta": "¿Cuántas sesiones necesita cada tratamiento?",
+      "respuesta": "BioPRO: 3 sesiones cada 3-4 semanas, mantenimiento 1-2 sesiones/año. FBio DVS rellenos: 1-2 sesiones, revisión a las 2 semanas, retoque si necesario a las 2-4 semanas, mantenimiento 6-12 meses."
+    },
+    {
+      "id": 31,
+      "categoria": "protocolos_aplicacion",
+      "pregunta": "¿Qué aguja uso para cada zona?",
+      "respuesta": "Con BioPRO: Cara V-Lift = Cánula 22G-50/70mm, Cara D-Lift = Aguja 30G/31G-13mm, Cuello = Cánula 22G-50mm. Con FBio DVS: Ojeras = Cánula 22G-50mm, Labios contorno = Aguja 30G, Labios volumen = Aguja 27G-30G, Pómulos = Cánula 22G o Aguja 27G, Surco nasolabial = Cánula 22G-50mm, Mentón = Aguja 25G, Mandíbula = Cánula 22G-50mm, Ángulo mandibular = Aguja 25G, Manos = Cánula 22G-50mm."
+    },
+    {
+      "id": 32,
+      "categoria": "protocolos_aplicacion",
+      "pregunta": "¿Cómo se conserva el producto?",
+      "respuesta": "Temperatura entre 2°C y 25°C, proteger de la luz directa, NO congelar. Caducidad: ver fecha en envase (generalmente 24 meses). No usar si envase dañado o producto turbio. Una vez abierto, usar inmediatamente."
+    },
+    {
+      "id": 33,
+      "categoria": "protocolos_aplicacion",
+      "pregunta": "¿Puedo combinar BioPRO con rellenos FBio DVS?",
+      "respuesta": "Sí, combinación excelente y recomendada. Opción 1 misma sesión: primero FBio DVS (zonas volumen), después BioPRO (rejuvenecimiento global). Opción 2 sesiones separadas: ciclo BioPRO (3 sesiones) y luego rellenos FBio DVS al finalizar. Todos usan tecnología DVS, perfectamente compatibles."
+    },
+    {
+      "id": 34,
+      "categoria": "protocolos_aplicacion",
+      "pregunta": "¿Puedo combinar BioPRO con bótox?",
+      "respuesta": "Sí, perfectamente compatibles. Misma sesión: primero toxina botulínica (tercio superior) y después BioPRO (tercio medio e inferior). Sesiones separadas: intervalo mínimo 2 semanas. Sinergia: toxina relaja músculo (menos arrugas dinámicas) + BioPRO regenera piel (mejor textura y firmeza)."
+    },
+    {
+      "id": 35,
+      "categoria": "protocolos_aplicacion",
+      "pregunta": "¿Cuánto esperar después de un peeling?",
+      "respuesta": "Peeling superficial: 1-2 semanas. Peeling medio (TCA 15-25%): 3-4 semanas. Peeling profundo (TCA >35%, fenol): 6-8 semanas. Esperar hasta que descamación termine, sin eritema residual, piel completamente reepitelizada."
+    },
+    {
+      "id": 36,
+      "categoria": "comparativas_competencia",
+      "pregunta": "¿Por qué DVS es mejor que BDDE?",
+      "respuesta": "DVS tiene peso molecular 118.15 Dalton vs BDDE 202.25 Dalton (más pequeño). DVS crea distancia menor entre cadenas (unión más estrecha). DVS permite reticulación intra + intermolecular vs solo intermolecular con BDDE. DVS tiene residuos no reticulados casi nulos vs riesgo alto con BDDE. Resultado: microesferas 3D porosas vs cadenas lineales. En práctica: menor edema, más estable, más natural, menos riesgo."
+    },
+    {
+      "id": 37,
+      "categoria": "comparativas_competencia",
+      "pregunta": "Compara BioPRO con Profhilo",
+      "respuesta": "BioPRO es biomodulador de matriz celular con 3DVS, actúa en 3 niveles (extra, intra, subcelular), efecto lifting + volumen + regeneración, 3 sesiones cada 3-4 semanas, duración 12+ meses, técnica V-Lift/D-Lift. Profhilo es bioestimulador sin reticular, 1 nivel (extracelular), efecto hidratación + laxitud, 2 sesiones cada 4 semanas, duración 6 meses, técnica BAP (5 puntos). BioPRO para pacientes que necesitan hidratación + lifting + mejora de contorno."
+    },
+    {
+      "id": 38,
+      "categoria": "comparativas_competencia",
+      "pregunta": "Compara Novacutan con Juvederm",
+      "respuesta": "Son productos diferentes: BioPRO es biomodulador (regenerar/hidratar/lifting sutil, reticulante DVS, acción terapéutica). Juvederm es relleno dérmico (rellenar volumen específico, reticulante BDDE, acción mecánica). Para rellenos comparables usar FBio DVS: microesferas 3D vs gel monofásico, edema mínimo vs moderado, naturalidad alta vs media. NOVACUTAN ofrece BioPRO para regenerar y FBio DVS para rellenar, ambos con DVS que produce menos edema."
+    },
+    {
+      "id": 39,
+      "categoria": "comparativas_competencia",
+      "pregunta": "¿Por qué dura más que la competencia?",
+      "respuesta": "Tres razones: 1) Estructura 3D de microesferas que se integra mejor y degrada más lentamente. 2) Biodegradación por etapas (superficie → capas internas → núcleo). 3) Reticulación con DVS que crea puentes más estrechos y estables. Resultado: efectos 12+ meses vs 6-8 meses de otros productos."
+    },
+    {
+      "id": 40,
+      "categoria": "objeciones",
+      "pregunta": "El doctor dice que es muy caro",
+      "respuesta": "Argumento 1 relación calidad-precio: efecto 12+ meses vs 6 meses, menos sesiones mantenimiento, menos productos complementarios, coste por mes menor. Argumento 2 satisfacción paciente: menor edema, menos quejas, menos retoques gratuitos, más referencias. Argumento 3 diferenciación: posicionarse como clínica premium con tecnología exclusiva. Cierre: \"¿Qué le parece si empezamos con un pack de prueba?\""
+    },
+    {
+      "id": 41,
+      "categoria": "objeciones",
+      "pregunta": "Ya usa otra marca y está contento",
+      "respuesta": "Paso 1 validar: \"Es normal, si le funciona es lógico.\" Paso 2 sembrar duda constructiva: \"¿Cuánto edema tienen sus pacientes? ¿Cada cuánto necesitan mantenimiento?\" Paso 3 presentar ventaja: menos hinchazón con DVS vs BDDE, resultados más duraderos, triple acción celular. Paso 4 propuesta sin riesgo: \"Probar con 2-3 pacientes y comparar. Sin compromiso.\""
+    },
+    {
+      "id": 42,
+      "categoria": "objeciones",
+      "pregunta": "No conoce la marca",
+      "respuesta": "Presentación: Laboratoires Fijie France, París, 10+ años en estética inyectable. Registrado desde 2014 (FBio DVS) y 2019 (BioPRO). Más de 30 países. Marcado CE Clase III. Enfocados en calidad e innovación, tecnología 3DVS exclusiva. Evidencia: estudios clínicos, casos antes/después, contacto con doctores que ya lo usan."
+    },
+    {
+      "id": 43,
+      "categoria": "objeciones",
+      "pregunta": "Dice que lo va a pensar",
+      "respuesta": "Opción 1 identificar objeción real: \"¿Qué aspecto le gustaría considerar? ¿El precio, los resultados, la seguridad?\" Opción 2 crear urgencia suave con promoción vigente. Opción 3 dejar puerta abierta: enviar catálogo, estudio clínico, video de aplicación, y programar llamada de seguimiento."
+    },
+    {
+      "id": 44,
+      "categoria": "argumentos_venta",
+      "pregunta": "Dame argumentos del BioPRO",
+      "respuesta": "1) Tecnología exclusiva 3DVS con microesferas tridimensionales. 2) Triple acción celular única en el mercado (extracelular, intracelular, subcelular). 3) Menor inflamación y edema gracias al DVS. 4) Efecto duradero 12+ meses por biodegradación por etapas. 5) Seguridad demostrada: purificación anfifílica 3 etapas, Marcado CE, estudio con 32 pacientes."
+    },
+    {
+      "id": 45,
+      "categoria": "argumentos_venta",
+      "pregunta": "¿Cómo presento Novacutan a un dermatólogo?",
+      "respuesta": "Los dermatólogos valoran la calidad de piel. Argumentos clave: BioPRO regenera la matriz extracelular a nivel celular (no solo hidrata), la triple acción celular activa fibroblastos para producir colágeno, elastina y proteoglicanos propios. Resultados naturales documentados con Antera 3D. Producto ideal para pacientes que buscan rejuvenecimiento real, no solo relleno."
+    },
+    {
+      "id": 46,
+      "categoria": "argumentos_venta",
+      "pregunta": "¿Cómo presento Novacutan a un cirujano plástico?",
+      "respuesta": "Los cirujanos plásticos buscan resultados predecibles y control. Argumentos: FBio DVS Volume para estructura y definición (mandíbula, mentón), BioPRO como complemento a cirugía para mejorar calidad de piel. Tecnología DVS = menor edema = retorno más rápido del paciente. Compatibilidad con otros procedimientos."
+    },
+    {
+      "id": 47,
+      "categoria": "argumentos_venta",
+      "pregunta": "¿Cómo presento a un médico estético?",
+      "respuesta": "Los médicos estéticos buscan versatilidad. Argumentos: gama completa (biomodulador + 3 rellenos), todos con misma tecnología DVS (compatibles entre sí). Protocolo combinado BioPRO + FBio DVS para tratamiento integral. Diferenciación frente a clínicas que solo usan marcas convencionales."
+    },
+    {
+      "id": 48,
+      "categoria": "seguridad_contraindicaciones",
+      "pregunta": "¿Puedo tratar a una paciente embarazada?",
+      "respuesta": "NO, contraindicación absoluta. Por principio de precaución médica no se realizan tratamientos estéticos inyectables durante embarazo. También contraindicado en lactancia, sospecha de embarazo. Posponer hasta después de embarazo y lactancia."
+    },
+    {
+      "id": 49,
+      "categoria": "seguridad_contraindicaciones",
+      "pregunta": "Paciente con anticoagulantes",
+      "respuesta": "Contraindicación relativa. Riesgos: mayor probabilidad de hematomas. Opción 1: suspensión temporal SOLO con autorización del médico prescriptor (Aspirina 7-10 días, Clopidogrel 7 días, Warfarina 5 días, ACOD 48-72h). Opción 2: tratar sin suspender usando cánula, presión prolongada, avisar de hematomas, considerar árnica."
+    },
+    {
+      "id": 50,
+      "categoria": "seguridad_contraindicaciones",
+      "pregunta": "¿Hay riesgo si tiene herpes?",
+      "respuesta": "Herpes activo: NO TRATAR. Herpes recurrente no activo: SÍ con profilaxis antiviral: Valaciclovir 500mg/12h o Aciclovir 400mg/8h, 2 días antes + 5 días después. Especialmente importante en labios y zona perioral."
+    },
+    {
+      "id": 51,
+      "categoria": "seguridad_contraindicaciones",
+      "pregunta": "Lista de contraindicaciones",
+      "respuesta": "Absolutas: embarazo, alergia al ácido hialurónico, infección activa en zona, enfermedad autoinmune no controlada, herpes activo. Relativas: lactancia, anticoagulantes, diabetes no controlada, queloides, autoinmune controlada, inmunosupresión, herpes recurrente. Precauciones: expectativas poco realistas, tratamientos con permanentes, rosácea activa, procedimiento dental reciente (<2 sem)."
+    },
+    {
+      "id": 52,
+      "categoria": "complicaciones",
+      "pregunta": "El paciente tiene mucha hinchazón",
+      "respuesta": "Determinar si normal o anormal. Normal: inmediato, simétrico, sin dolor intenso, resuelve 3-7 días. Tratar con frío local, cabeza elevada, evitar ejercicio 48h, evitar alcohol/sal, árnica. Anormal (alarma): asimétrico, dolor intenso, cambio color, empeora progresivamente, fiebre → ver protocolo complicaciones."
+    },
+    {
+      "id": 53,
+      "categoria": "complicaciones",
+      "pregunta": "Sospecha de compromiso vascular",
+      "respuesta": "EMERGENCIA. Signos: blanqueamiento cutáneo, dolor intenso, livedo reticularis, cambio violáceo/azulado. ACCIÓN: 1) Detener inyección, 2) Compresas CALIENTES (NO frío), 3) Masaje vigoroso, 4) Hialuronidasa 150-300 UI intralesional, 5) Repetir cada hora si no mejora, 6) Nitroglicerina tópica 2%, 7) AAS 325mg oral. Dosis por zona: Glabela 10-30UI, Nariz 10-30UI, Surco nasolabial 30-60UI, Labios 20-40UI, Periocular 15-30UI. Derivar a urgencias si compromiso ocular o no mejora en 1 hora."
+    },
+    {
+      "id": 54,
+      "categoria": "complicaciones",
+      "pregunta": "Hay un nódulo después del tratamiento",
+      "respuesta": "Identificar tipo: por producto (firme, no doloroso, inmediato), edema localizado (blando, 24-72h), infección (doloroso, rojo, caliente, 3-7 días), granuloma (firme, semanas-meses). Nódulo por producto: masaje suave, si persiste hialuronidasa 10-30 UI. Infección: antibiótico (amoxicilina-clavulánico), NO hialuronidasa hasta resolver infección. Granuloma: corticoides intralesionales + hialuronidasa."
+    },
+    {
+      "id": 55,
+      "categoria": "complicaciones",
+      "pregunta": "¿Cómo disuelvo el producto?",
+      "respuesta": "Indicaciones: compromiso vascular (urgente), sobrecorrección, nódulos, Tyndall, resultado no deseado. Producto: Hialuronidasa (Hyalase, Hylenex). Dosis: emergencia vascular 150-300 UI, sobrecorrección leve 10-30 UI, nódulo 10-20 UI, Tyndall 5-15 UI, disolución zona 30-75 UI. Técnica: marcar zona, inyectar en múltiples puntos, masajear, evaluar 24h, repetir si necesario. Inicio de acción: minutos. Efecto visible: 24-48h."
+    },
+    {
+      "id": 56,
+      "categoria": "cuidados_post",
+      "pregunta": "¿Qué le digo al paciente después del tratamiento?",
+      "respuesta": "Primeras 24h SÍ: frío suave, cabeza elevada, paracetamol. NO: tocar/masajear zona, maquillaje 12h, sol directo, ejercicio intenso, alcohol. Primera semana evitar: saunas, deportes contacto, tratamientos faciales, sol prolongado. SÍ: SPF 50+, hidratación normal. Contactar inmediatamente si: dolor intenso, cambio color blanco/azulado, fiebre, enrojecimiento que aumenta tras 48h, pústulas, alteraciones visión."
+    },
+    {
+      "id": 57,
+      "categoria": "cuidados_post",
+      "pregunta": "¿Cuándo programa la siguiente cita?",
+      "respuesta": "BioPRO: revisión opcional 2 semanas, 2ª sesión 3-4 semanas, 3ª sesión 3-4 semanas después, resultado final 4 semanas después de 3ª, mantenimiento 10-12 meses. FBio DVS: revisión 2 semanas, retoque 2-4 semanas si necesario, mantenimiento 6-12 meses."
+    },
+    {
+      "id": 58,
+      "categoria": "zonas_tecnicas",
+      "pregunta": "Técnica para surco lagrimal",
+      "respuesta": "ZONA DE ALTO RIESGO. Producto: FBio DVS Light. Instrumento: Cánula 22G-50mm obligatorio. Volumen: 0.2-0.5ml por lado máximo. Plano supraperióstico. Punto de entrada lateral en zona malar. Depósito: 0.05ml por punto, retrotrazante lento. Contraindicaciones: bolsas de grasa (derivar blefaroplastia), piel muy fina, ojeras por hiperpigmentación. Si Tyndall: hialuronidasa."
+    },
+    {
+      "id": 59,
+      "categoria": "zonas_tecnicas",
+      "pregunta": "Técnica para aumento de labios",
+      "respuesta": "Productos: Light (sutil) o Medium (moderado). Primera vez 0.5-1ml, máximo 1.5ml/sesión. Perfilado: Light aguja 30G borde bermellón. Cuerpo labial: Light/Medium 27G-30G, bolus 3 puntos. Arco cupido: Light 30G, 0.05ml por pico. Proporción 1:1.6 sup:inf. Edema 48-72h, resultado final 10-14 días."
+    },
+    {
+      "id": 60,
+      "categoria": "zonas_tecnicas",
+      "pregunta": "Técnica para ángulo mandibular",
+      "respuesta": "Producto: FBio DVS Volume. Volumen: 0.5-1ml por lado. Aguja 25G-13mm. Profundidad supraperióstico. Insertar perpendicular hasta hueso, retirar 1mm, bolus 0.3-0.5ml, moldear si necesario. Hombres: ángulo más marcado, hasta 1ml/lado. Mujeres: ángulo suave, 0.3-0.5ml/lado."
+    },
+    {
+      "id": 61,
+      "categoria": "zonas_tecnicas",
+      "pregunta": "Técnica para surcos nasogenianos",
+      "respuesta": "Producto: FBio DVS Medium. Volumen: 0.5-1ml por lado. Cánula 22G-50mm preferido o aguja 27G. Subdérmico profundo a supraperióstico. Punto entrada lateral al surco en zona malar. Para surcos muy profundos, técnica en capas: profunda FBio Volume (soporte) + superficial FBio Medium (corrección)."
+    },
+    {
+      "id": 62,
+      "categoria": "zonas_tecnicas",
+      "pregunta": "Paciente primera vez con rellenos, 35 años",
+      "respuesta": "Enfoque conservador, natural. Opción 1 solo rejuvenecimiento/prevención: BioPRO protocolo D-Lift. Opción 2 corrección sutil: FBio DVS Light en zonas que preocupen. Empezar con menos producto, usar Light, explicar edema temporal, citar revisión 2 semanas. El objetivo es mejora natural, no transformación."
+    },
+    {
+      "id": 63,
+      "categoria": "zonas_tecnicas",
+      "pregunta": "Paciente 45 años con flacidez óvalo facial",
+      "respuesta": "Producto: BioPRO. Protocolo V-Lift con cánula 22G-50mm, técnica fanning subdérmico. 3 sesiones cada 3-4 semanas. Resultados: lifting visible desde 1ª sesión, mejora progresiva, máximo efecto 4 semanas post-ciclo, duración 12+ meses."
+    },
+    {
+      "id": 64,
+      "categoria": "zonas_tecnicas",
+      "pregunta": "Paciente hombre 50 años definir mandíbula",
+      "respuesta": "Producto: FBio DVS Volume. Cantidad: 1-2ml por lado. Cánula 22G-50mm o aguja 25G. Técnica bolus + vectorial supraperióstico. Zonas: ángulo mandibular (bolus profundo), línea mandibular (vectorial), mentón si necesario. 1-2 sesiones. FBio Volume ideal para rostros masculinos por alta cohesividad."
+    },
+    {
+      "id": 65,
+      "categoria": "comparativas_competencia",
+      "pregunta": "Compara BioPRO con Sunekos",
+      "respuesta": "BioPRO es un biomodulador de matriz celular reticulado con DVS que actúa en 3 niveles (extracelular, intracelular, subcelular), con efecto lifting + regeneración, duración 12+ meses. Sunekos es un bioestimulador basado en aminoácidos + AH no reticulado, actúa a nivel extracelular estimulando la producción de colágeno y elastina, requiere 4 sesiones semanales, duración 4-6 meses. BioPRO ofrece mayor duración y mayor versatilidad de protocolos."
+    },
+    {
+      "id": 66,
+      "categoria": "comparativas_competencia",
+      "pregunta": "Compara FBio DVS con Restylane",
+      "respuesta": "FBio DVS usa reticulante DVS que crea microesferas 3D porosas con menor edema, mientras Restylane usa BDDE con estructura de gel bifásico (partículas en gel). FBio DVS ofrece integración tisular más natural gracias a la estructura porosa, menor inflamación post-tratamiento y biodegradación por etapas más controlada. Restylane tiene amplia trayectoria clínica pero su reticulante BDDE genera más edema y una degradación más uniforme."
+    },
+    {
+      "id": 67,
+      "categoria": "comparativas_competencia",
+      "pregunta": "Compara BioPRO con Sculptra",
+      "respuesta": "Sculptra es un bioestimulador de ácido poli-L-láctico (PLLA), no es ácido hialurónico. Sculptra actúa estimulando la neocolagénesis mecánicamente, requiere 3-4 sesiones mensuales, resultados visibles a partir de 4-6 semanas, duración hasta 24 meses, NO reversible con hialuronidasa. BioPRO actúa en 3 niveles celulares, resultados visibles desde la primera sesión, duración 12+ meses, y ES reversible con hialuronidasa. BioPRO es más seguro por su reversibilidad."
+    },
+    {
+      "id": 68,
+      "categoria": "comparativas_competencia",
+      "pregunta": "Compara BioPRO con Radiesse",
+      "respuesta": "Radiesse está compuesto de microesferas de hidroxiapatita cálcica (CaHA) en gel de carboximetilcelulosa. No es ácido hialurónico y NO es reversible con hialuronidasa. BioPRO es ácido hialurónico reticulado con DVS, completamente reversible. Radiesse ofrece volumen inmediato + bioestimulación, duración 12-18 meses, pero con riesgo de nódulos visibles en zonas de piel fina. BioPRO ofrece triple acción celular con perfil de seguridad superior gracias a su reversibilidad."
+    },
+    {
+      "id": 69,
+      "categoria": "comparativas_competencia",
+      "pregunta": "¿Por qué elegir Novacutan sobre Teosyal?",
+      "respuesta": "Teosyal usa BDDE como reticulante, con estructura de gel monofásico. Novacutan usa DVS que crea microesferas 3D con menor peso molecular del reticulante (118 vs 202 Dalton), lo que resulta en menor edema post-tratamiento. Además, Novacutan ofrece BioPRO como biomodulador de triple acción celular, algo que Teosyal no tiene en su gama. La biodegradación por etapas de DVS también significa mayor duración del efecto."
+    },
+    {
+      "id": 70,
+      "categoria": "comparativas_competencia",
+      "pregunta": "¿Qué ventaja tiene Novacutan sobre Belotero?",
+      "respuesta": "Belotero utiliza tecnología CPM (Cohesive Polydensified Matrix) con reticulante BDDE. Novacutan utiliza tecnología 3DVS exclusiva con reticulante DVS. Las ventajas de Novacutan incluyen: menor edema por estructura más compacta, microesferas 3D que se integran mejor en la matriz extracelular, biodegradación por etapas para mayor duración, y la disponibilidad de BioPRO como biomodulador de triple acción celular que no tiene equivalente en la gama Belotero."
+    },
+    {
+      "id": 71,
+      "categoria": "seguridad_contraindicaciones",
+      "pregunta": "¿Y si el paciente tiene diabetes?",
+      "respuesta": "Diabetes no controlada es contraindicación relativa. Si la diabetes está bien controlada (HbA1c <7%), se puede tratar con precauciones: verificar última analítica, control glucémico estable, mayor riesgo de infección (asepsia estricta), cicatrización más lenta (informar al paciente), preferir cánula sobre aguja para menor trauma tisular, seguimiento más estrecho post-tratamiento. Diabetes mal controlada: posponer hasta estabilizar cifras."
+    },
+    {
+      "id": 72,
+      "categoria": "seguridad_contraindicaciones",
+      "pregunta": "¿Puedo tratar a pacientes mayores de 60 años?",
+      "respuesta": "Sí, pero con expectativas realistas y adaptaciones. Piel más fina y frágil requiere técnica más delicada. BioPRO V-Lift es excelente para mejorar calidad de piel y firmeza. Usar volúmenes conservadores en rellenos. Preferir cánula sobre aguja para reducir riesgo de hematomas. Evitar sobrecorrección. Piel atrófica extrema: valorar si el beneficio justifica el tratamiento. Los resultados en pacientes mayores son de mejora, no de transformación."
+    },
+    {
+      "id": 73,
+      "categoria": "seguridad_contraindicaciones",
+      "pregunta": "¿Y si tiene enfermedad autoinmune?",
+      "respuesta": "Enfermedad autoinmune NO controlada: contraindicación absoluta por riesgo de reacción inmunológica exagerada, formación de granulomas, y brotes de la enfermedad. Enfermedad autoinmune controlada: contraindicación relativa, se puede considerar con autorización del reumatólogo/especialista, preferir BioPRO por su alta pureza anfifílica, evitar periodos de brote activo, vigilar signos de reacción tardía. Enfermedades de mayor riesgo: lupus, esclerodermia, dermatomiositis."
+    },
+    {
+      "id": 74,
+      "categoria": "seguridad_contraindicaciones",
+      "pregunta": "¿Es seguro en pacientes con alergia a la lidocaína?",
+      "respuesta": "Los productos Novacutan NO contienen lidocaína integrada en la fórmula, por lo que la alergia a lidocaína no es una contraindicación directa para el producto en sí. Sin embargo, si se usa anestesia tópica o infiltrativa con lidocaína como parte del procedimiento, se debe sustituir por otro anestésico local como mepivacaína o prilocaína, o bien realizar el procedimiento sin anestesia local, aplicando solo frío tópico."
+    },
+    {
+      "id": 75,
+      "categoria": "seguridad_contraindicaciones",
+      "pregunta": "¿Y pacientes con tendencia a queloides?",
+      "respuesta": "Tendencia a queloides es contraindicación relativa. El riesgo principal es la formación de queloides en los puntos de entrada de la aguja o cánula, no por el producto en sí. Precauciones: usar el menor número de puntos de entrada posible, preferir cánula (un solo punto vs múltiples con aguja), realizar test en zona discreta, informar al paciente del riesgo. Si tiene antecedentes de queloides severos o queloide activo en zona de tratamiento, mejor no tratar."
+    },
+    {
+      "id": 76,
+      "categoria": "seguridad_contraindicaciones",
+      "pregunta": "¿Puedo tratar si ha tenido procedimiento dental reciente?",
+      "respuesta": "Se recomienda esperar al menos 2 semanas después de un procedimiento dental antes de realizar tratamiento inyectable facial. Esto se debe al riesgo de bacteriemia transitoria que puede colonizar el producto inyectado y causar infección tardía. Especialmente importante en zona de labios, surcos nasogenianos y mentón. Si fue limpieza dental rutinaria: 1 semana. Si fue procedimiento invasivo (extracción, implante, endodoncia): 2-4 semanas."
+    },
+    {
+      "id": 77,
+      "categoria": "seguridad_contraindicaciones",
+      "pregunta": "¿Puedo tratar a un paciente inmunosuprimido?",
+      "respuesta": "Inmunosupresión es contraindicación relativa. Pacientes en tratamiento con inmunosupresores (metotrexato, azatioprina, biológicos) tienen mayor riesgo de infección post-tratamiento y posible menor respuesta al efecto biomodulador de BioPRO. Se requiere autorización del especialista prescriptor, asepsia extrema, seguimiento estrecho, y valorar si la inmunosupresión es temporal o permanente. Si el paciente está gravemente inmunodeprimido (quimioterapia activa, SIDA avanzado), NO tratar."
+    },
+    {
+      "id": 78,
+      "categoria": "complicaciones",
+      "pregunta": "¿Qué hago si aparece efecto Tyndall?",
+      "respuesta": "El efecto Tyndall es una coloración azulada visible bajo la piel causada por producto inyectado demasiado superficialmente. Es más frecuente en zonas de piel fina como el surco lagrimal. Tratamiento: hialuronidasa 5-15 UI inyectada directamente sobre el depósito de producto. Prevención: inyectar siempre en plano supraperióstico en zonas de piel fina, usar cánula en surco lagrimal, evitar volúmenes excesivos. El Tyndall no es urgente pero es estéticamente inaceptable para el paciente."
+    },
+    {
+      "id": 79,
+      "categoria": "complicaciones",
+      "pregunta": "¿Qué hago si el resultado es asimétrico?",
+      "respuesta": "Primero esperar al menos 2 semanas para que se resuelva el edema y el producto se integre completamente. La asimetría inmediata frecuentemente se corrige sola con la resolución del edema. Si persiste a las 2 semanas: evaluar si es defecto de producto (falta o exceso en un lado), asimetría preexistente acentuada, o edema residual unilateral. Tratamiento: retoque con producto adicional en el lado deficitario, o hialuronidasa focal si hay exceso en un lado. Siempre fotografiar antes y después para documentar."
+    },
+    {
+      "id": 80,
+      "categoria": "complicaciones",
+      "pregunta": "¿Cómo manejo una infección tardía post-tratamiento?",
+      "respuesta": "Infección tardía (>7 días) puede ser biofilm bacteriano. Signos: eritema recurrente, hinchazón fluctuante, dolor sordo, a veces sin fiebre. Tratamiento: antibioterapia prolongada (claritromicina 500mg/12h + ciprofloxacino 500mg/12h durante 2-4 semanas). NO disolver con hialuronidasa hasta completar antibioterapia (liberar bacterias del biofilm). Si no responde: valorar drenaje quirúrgico + cultivo. Una vez resuelta la infección, valorar hialuronidasa para eliminar restos de producto."
+    },
+    {
+      "id": 81,
+      "categoria": "complicaciones",
+      "pregunta": "¿Qué signos de alarma debe vigilar el paciente?",
+      "respuesta": "Signos de alarma que requieren contacto INMEDIATO con el médico: dolor intenso desproporcionado que no cede con paracetamol, cambio de color de la piel a blanco (isquemia) o violáceo/azulado, fiebre superior a 38°C, enrojecimiento que aumenta después de 48 horas en lugar de disminuir, pústulas o secreción purulenta, alteraciones de la visión (emergencia máxima), necrosis cutánea (piel negra). Estos signos pueden indicar compromiso vascular, infección o reacción alérgica grave."
+    },
+    {
+      "id": 82,
+      "categoria": "complicaciones",
+      "pregunta": "¿Cómo prevenir el compromiso vascular?",
+      "respuesta": "Prevención: conocer la anatomía vascular facial (arterias facial, angular, supratroclear, supraorbitaria, infraorbitaria), aspirar antes de inyectar en zonas de riesgo, inyectar lentamente con volúmenes pequeños (0.05-0.1ml por depósito), usar cánula en zonas vasculares (nariz, surco lagrimal, surco nasolabial), evitar inyección en glabela/nariz si no se tiene experiencia. Tener siempre hialuronidasa disponible y preparada antes de cada sesión."
+    },
+    {
+      "id": 83,
+      "categoria": "complicaciones",
+      "pregunta": "¿Cómo manejar una reacción alérgica al producto?",
+      "respuesta": "Las reacciones alérgicas al ácido hialurónico son muy raras dado su origen biológico. Reacción leve (eritema localizado, prurito): antihistamínico oral (cetirizina 10mg), corticoide tópico, observar 30 minutos. Reacción moderada (urticaria generalizada, angioedema): adrenalina IM 0.3mg si angioedema, corticoide IV, antihistamínico IV, observar 4-6 horas. Reacción severa (anafilaxia): protocolo ABCDE, adrenalina IM, derivar urgencias. Tener siempre kit de emergencia en consulta."
+    },
+    {
+      "id": 84,
+      "categoria": "cuidados_post",
+      "pregunta": "¿Puede el paciente volar en avión después del tratamiento?",
+      "respuesta": "Se recomienda esperar 24-48 horas antes de volar después de un tratamiento inyectable facial. La presión de cabina puede aumentar el edema. Si el vuelo es inevitable, aplicar frío intermitente, mantener cabeza elevada, evitar alcohol y comidas saladas durante el vuelo, y usar protección solar en caso de ventanilla. Para vuelos largos (más de 4 horas), es preferible esperar 72 horas post-tratamiento."
+    },
+    {
+      "id": 85,
+      "categoria": "cuidados_post",
+      "pregunta": "¿Cuándo puede hacer ejercicio después del tratamiento?",
+      "respuesta": "Ejercicio ligero (caminar): a partir de 24 horas. Ejercicio moderado (yoga, pilates, natación): a partir de 48-72 horas. Ejercicio intenso (CrossFit, correr, pesas pesadas): esperar 5-7 días. El ejercicio intenso aumenta el flujo sanguíneo facial, eleva la temperatura corporal y puede aumentar el edema o causar migración del producto en las primeras horas. Deportes de contacto: esperar al menos 2 semanas."
+    },
+    {
+      "id": 86,
+      "categoria": "cuidados_post",
+      "pregunta": "¿Puede maquillarse después del tratamiento?",
+      "respuesta": "Se recomienda evitar el maquillaje durante las primeras 12 horas post-tratamiento para reducir el riesgo de infección a través de los puntos de inyección. Después de 12 horas se puede aplicar maquillaje mineral suave. A las 24 horas se puede usar maquillaje normal. Siempre limpiar bien la piel antes de aplicar maquillaje. Evitar brochas compartidas o maquillaje caducado. Si se realizaron múltiples punciones, esperar 24 horas completas."
+    },
+    {
+      "id": 87,
+      "categoria": "cuidados_post",
+      "pregunta": "¿Qué cremas puede usar después del tratamiento?",
+      "respuesta": "Primeras 24h: solo crema hidratante suave sin activos (tipo Cicaplast, Cicalfate). Días 2-7: incorporar SPF 50+ diario, crema hidratante habitual, evitar retinol, ácidos (glicólico, salicílico), vitamina C potente. Después de 1 semana: retomar rutina habitual de skincare. Evitar tratamientos tópicos agresivos (retinol alta concentración, peelings caseros) durante 2 semanas. La protección solar es obligatoria durante todo el proceso."
+    },
+    {
+      "id": 88,
+      "categoria": "cuidados_post",
+      "pregunta": "¿Puede tomar el sol después del tratamiento?",
+      "respuesta": "Evitar exposición solar directa durante los primeros 7-14 días post-tratamiento. Los rayos UV pueden aumentar la inflamación, causar hiperpigmentación post-inflamatoria y potencialmente degradar el producto más rápido. Usar siempre SPF 50+ desde el día siguiente al tratamiento. Si la exposición solar es inevitable, usar sombrero y protección física. Evitar cabinas de bronceado durante al menos 4 semanas. La protección solar es especialmente importante en pieles oscuras (fototipos IV-VI)."
+    },
+    {
+      "id": 89,
+      "categoria": "protocolos_aplicacion",
+      "pregunta": "¿Puedo combinar BioPRO con láser?",
+      "respuesta": "Sí, pero con intervalos adecuados. Láser no ablativo (IPL, Nd:YAG): esperar 2 semanas antes o después de BioPRO. Láser ablativo (CO2 fraccionado, Erbium): esperar 4-6 semanas antes o después. Radiofrecuencia: esperar 2-4 semanas. La mejor secuencia es: primero el láser, esperar a cicatrización completa, luego BioPRO. Si se invierte: primero BioPRO, ciclo completo, luego láser después de 4 semanas de la última sesión."
+    },
+    {
+      "id": 90,
+      "categoria": "protocolos_aplicacion",
+      "pregunta": "¿Puedo combinar BioPRO con hilos tensores?",
+      "respuesta": "Sí, la combinación es sinérgica. Los hilos tensores proporcionan soporte mecánico y BioPRO regenera la calidad de la piel. Protocolo recomendado: primero hilos tensores, esperar 4 semanas para que se estabilicen, luego ciclo de BioPRO (3 sesiones). Alternativa: ciclo de BioPRO completo primero, luego hilos 4 semanas después de la última sesión de BioPRO. Nunca en la misma sesión. La combinación ofrece lifting mecánico + biológico."
+    },
+    {
+      "id": 91,
+      "categoria": "protocolos_aplicacion",
+      "pregunta": "¿Cómo es el protocolo para cuello con BioPRO?",
+      "respuesta": "Producto: BioPRO 2ml. Instrumento: Cánula 22G-50mm preferido. Técnica: fanning subdérmico horizontal siguiendo las líneas del cuello. Puntos de entrada: 2-3 por lado, zona lateral del cuello. Volumen: 0.1ml por pasada. Cuidado: evitar zona de vasos carotídeos (medial). Complementar con D-Lift si se necesitan puntos específicos. 3 sesiones cada 3-4 semanas. Excelente para líneas horizontales del cuello y mejorar calidad de piel."
+    },
+    {
+      "id": 92,
+      "categoria": "protocolos_aplicacion",
+      "pregunta": "¿Puedo usar BioPRO en escote?",
+      "respuesta": "Sí, BioPRO es excelente para rejuvenecimiento de escote (décolleté). Producto: BioPRO 2ml (puede necesitar 2 jeringas para escote amplio). Instrumento: Cánula 22G-50mm. Técnica: fanning subdérmico. Puntos de entrada: 3-4 distribuidos en la zona del escote. Depósito superficial subdérmico, 0.05-0.1ml por pasada. 3 sesiones cada 3-4 semanas. Ideal para arrugas del escote y mejorar textura de piel fotoenvejecida."
+    },
+    {
+      "id": 93,
+      "categoria": "protocolos_aplicacion",
+      "pregunta": "¿Puedo usar BioPRO en manos?",
+      "respuesta": "Sí, el dorso de las manos es una indicación excelente para BioPRO. Producto: BioPRO 1ml por mano (total 2ml = 1 jeringa para ambas manos). Instrumento: Cánula 22G-50mm obligatorio (zona vascular). Punto de entrada único en el dorso, avanzar la cánula en abanico subdérmico. Depósito: 0.05ml por pasada. Para volumen adicional: FBio DVS Light con cánula. 3 sesiones cada 3-4 semanas. Resultado: piel más gruesa, luminosa, venas menos visibles."
+    },
+    {
+      "id": 94,
+      "categoria": "zonas_tecnicas",
+      "pregunta": "Técnica para pómulos",
+      "respuesta": "Producto: FBio DVS Medium. Volumen: 0.5-1.5ml por lado según necesidad. Instrumento: cánula 22G-50mm (preferido) o aguja 27G. Plano supraperióstico a nivel de la eminencia malar. Con cánula: punto de entrada lateral, avanzar hacia pómulo, depositar en abanico. Con aguja: bolus perpendicular sobre hueso, 0.2-0.3ml por punto. Para mayor proyección usar FBio DVS Volume. Moldear después de depositar. Resultado: mejora del tercio medio, efecto lifting indirecto en surco nasolabial."
+    },
+    {
+      "id": 95,
+      "categoria": "zonas_tecnicas",
+      "pregunta": "Técnica para mentón",
+      "respuesta": "Producto: FBio DVS Volume (máxima proyección) o Medium (corrección moderada). Volumen: 0.5-1.5ml total. Aguja 25G perpendicular al hueso. Plano supraperióstico. Técnica bolus central: 1-2 puntos en la línea media del mentón, 0.3-0.5ml por punto. Para alargamiento: bolus inferior. Para proyección: bolus anterior. Moldear tras inyección. Hombres: mentón más cuadrado y proyectado. Mujeres: mentón más ovalado y sutil. Evaluar oclusión dental y simetría previa."
+    },
+    {
+      "id": 96,
+      "categoria": "zonas_tecnicas",
+      "pregunta": "Técnica para línea mandibular completa",
+      "respuesta": "Producto: FBio DVS Volume (estructura) + Medium (suavizar). Volumen: 1-3ml por lado según pérdida de definición. Instrumento: cánula 22G-50mm preferido. Punto de entrada en ángulo mandibular, avanzar cánula a lo largo del borde mandibular. Técnica vectorial retrotrazante, depositar 0.1-0.2ml por pasada. Combinar con bolus de Volume en ángulo mandibular para soporte. 1-2 sesiones. Resultado: jawline definido, mejora del tercio inferior, efecto lifting indirecto."
+    },
+    {
+      "id": 97,
+      "categoria": "zonas_tecnicas",
+      "pregunta": "Técnica para zona temporal",
+      "respuesta": "Producto: FBio DVS Medium o Light. Volumen: 0.5-1ml por lado. Instrumento: cánula 22G-50mm obligatorio (zona vascular con arteria temporal). Punto de entrada superior o posterior a la línea del pelo. Plano supraperióstico profundo. Avanzar cánula lentamente, depositar en abanico. NUNCA usar aguja en zona temporal por riesgo vascular elevado. Indicado en atrofia temporal, esqueletización facial, complemento a tratamiento de tercio superior."
+    },
+    {
+      "id": 98,
+      "categoria": "zonas_tecnicas",
+      "pregunta": "¿Cómo tratar las arrugas de marioneta?",
+      "respuesta": "Producto: FBio DVS Medium. Volumen: 0.3-0.5ml por lado. Instrumento: cánula 22G-50mm o aguja 27G. Técnica: inyección subdérmica profunda a lo largo del surco, de abajo hacia arriba. Combinar con soporte en comisura labial. Para arrugas profundas: primer depósito profundo con Medium, luego superficial con Light. Complementar con BioPRO para mejorar calidad global de la piel del tercio inferior. Resultado: suavización del pliegue, mejora de expresión facial triste."
+    },
+    {
+      "id": 99,
+      "categoria": "zonas_tecnicas",
+      "pregunta": "¿Cómo tratar la nariz sin cirugía (rinomodelación)?",
+      "respuesta": "ZONA DE ALTO RIESGO. Producto: FBio DVS Medium (puente nasal) o Light (punta). Volumen: 0.3-0.8ml total máximo. Aguja 27G preferido para control preciso. Técnica: microdepósitos de 0.02-0.05ml supraperiósticos sobre el puente nasal. NUNCA inyectar en la punta nasal si no se tiene experiencia avanzada. Aspirar siempre antes de depositar. Riesgo vascular: arteria angular, arteria dorsal nasal. Tener hialuronidasa preparada. Solo inyectores experimentados."
+    },
+    {
+      "id": 100,
+      "categoria": "argumentos_venta",
+      "pregunta": "¿Qué materiales de marketing tiene Novacutan?",
+      "respuesta": "Novacutan proporciona: catálogo general de productos, fichas técnicas de cada producto, protocolo V-Lift y D-Lift detallados, estudios clínicos (32 pacientes con BioPRO), fotos antes/después de casos reales, vídeos de aplicación de protocolos, adhesivos de trazabilidad en cada caja, soporte para formación y workshops. El representante comercial puede solicitar material adicional adaptado a cada especialidad médica."
+    },
+    {
+      "id": 101,
+      "categoria": "argumentos_venta",
+      "pregunta": "¿Qué formación ofrece Novacutan?",
+      "respuesta": "Novacutan ofrece programa completo de formación: workshop de iniciación (protocolo V-Lift y D-Lift con BioPRO), masterclass avanzada (técnicas combinadas BioPRO + FBio DVS), formación en manejo de complicaciones, acompañamiento en primeros casos (según disponibilidad), material educativo digital (vídeos, presentaciones, fichas técnicas). La formación se puede realizar en clínica del doctor o en eventos organizados por Novacutan."
+    },
+    {
+      "id": 102,
+      "categoria": "argumentos_venta",
+      "pregunta": "¿Cómo hacer una demostración en consulta?",
+      "respuesta": "Paso 1: presentar brevemente la tecnología 3DVS y triple acción celular (2-3 minutos). Paso 2: mostrar las jeringas (peso, calidad, packaging). Paso 3: mostrar fotos antes/después del estudio clínico. Paso 4: ofrecer tratar a 1-2 pacientes del doctor con su supervisión (caso ideal: paciente con flacidez leve para BioPRO). Paso 5: programar seguimiento a las 2-4 semanas para ver resultados. Clave: dejar que el doctor vea y toque el producto, la calidad se percibe."
+    },
+    {
+      "id": 103,
+      "categoria": "argumentos_venta",
+      "pregunta": "¿Cuáles son los argumentos FAB de BioPRO?",
+      "respuesta": "Feature (Característica): Tecnología 3DVS con microesferas tridimensionales porosas y triple acción celular. Advantage (Ventaja): Actúa en 3 niveles (extracelular, intracelular, subcelular), menor edema que BDDE, biodegradación por etapas. Benefit (Beneficio para el doctor): Pacientes más satisfechos con resultados naturales y duraderos (12+ meses), menos retoques gratuitos, menos quejas por hinchazón, diferenciación como clínica premium con tecnología exclusiva."
+    },
+    {
+      "id": 104,
+      "categoria": "argumentos_venta",
+      "pregunta": "¿Cuáles son los argumentos FAB de FBio DVS?",
+      "respuesta": "Feature (Característica): Relleno dérmico con reticulante DVS en 3 densidades (Light, Medium, Volume), 20mg/ml, microesferas 3D. Advantage (Ventaja): Gama completa para todas las indicaciones faciales, menor edema, integración tisular natural, reversible con hialuronidasa. Benefit (Beneficio): Una sola marca para todos los rellenos de la consulta, pacientes satisfechos por naturalidad y mínima inflamación, menos visitas de urgencia por edema excesivo, rentabilidad con descuentos por volumen."
+    },
+    {
+      "id": 105,
+      "categoria": "argumentos_venta",
+      "pregunta": "¿Cómo presento Novacutan a un ginecólogo estético?",
+      "respuesta": "Los ginecólogos estéticos buscan versatilidad y seguridad. Argumentos: BioPRO para rejuvenecimiento facial como servicio complementario a su consulta ginecológica, fácil de aprender (protocolo D-Lift con aguja), formación incluida, pacientes ya existentes en su consulta (mujeres 35-55 años), producto con máximo perfil de seguridad (Clase III, GMP). Oportunidad de ampliar servicios estéticos sin gran inversión."
+    },
+    {
+      "id": 106,
+      "categoria": "argumentos_venta",
+      "pregunta": "¿Cuál es la estrategia para abrir una nueva cuenta?",
+      "respuesta": "Paso 1: Identificar el perfil del médico y su especialidad. Paso 2: Primera visita de presentación (15 minutos máximo, pitch 30 segundos + material). Paso 3: Dejar catálogo, ficha técnica y estudio clínico. Paso 4: Follow-up telefónico a los 3-5 días. Paso 5: Ofrecer demostración con paciente en consulta. Paso 6: Primer pedido con condiciones especiales (pack introductorio). Paso 7: Seguimiento post-venta a las 2-4 semanas. Paso 8: Fidelización con formación continua y descuentos por volumen."
+    },
+    {
+      "id": 107,
+      "categoria": "argumentos_venta",
+      "pregunta": "¿Qué dice el estudio clínico de BioPRO?",
+      "respuesta": "El estudio clínico de BioPRO incluyó 32 pacientes tratados con protocolo V-Lift y D-Lift. Se documentó con análisis Antera 3D (medición objetiva de arrugas, textura, tono) y ultrasonido cutáneo (medición de grosor dérmico). Resultados: mejora significativa en grosor dérmico, reducción de arrugas, mejora de textura y luminosidad. Estudio de citotoxicidad: sin efectos tóxicos en células vivas a las 48 horas. Perfil de seguridad excelente sin efectos adversos graves. Este estudio es clave para convencer a médicos escépticos."
+    },
+    {
+      "id": 108,
+      "categoria": "argumentos_venta",
+      "pregunta": "¿Cómo manejar al doctor que solo quiere precio?",
+      "respuesta": "Nunca competir solo en precio, competir en valor. Argumentos: calcular coste por mes de efecto (12+ meses vs 6 meses = la mitad de coste real), menos sesiones de mantenimiento (ahorro en tiempo y producto), menos complicaciones por edema (menos retoques gratuitos), más referencias de pacientes satisfechos. Si insiste: ofrecer descuento por volumen (5-15%), pack introductorio para primeros casos, y condiciones de pago flexibles según política vigente."
+    },
+    {
+      "id": 109,
+      "categoria": "objeciones",
+      "pregunta": "El doctor dice que sus pacientes no quieren experimentar con marcas nuevas",
+      "respuesta": "Paso 1 validar: \"Entiendo perfectamente, la confianza del paciente es fundamental.\" Paso 2: Novacutan no es nuevo en el mercado, FBio DVS está registrado desde 2014 (más de 10 años) y BioPRO desde 2019. Paso 3: El paciente no elige la marca, confía en su médico. Lo que el paciente quiere es menos hinchazón, resultados naturales y duraderos. Paso 4: Proponer tratar pacientes nuevos con Novacutan para comparar, sin cambiar los protocolos de pacientes existentes."
+    },
+    {
+      "id": 110,
+      "categoria": "objeciones",
+      "pregunta": "El doctor dice que no tiene tiempo para aprender un producto nuevo",
+      "respuesta": "Paso 1: La formación es breve y práctica, no teórica. Paso 2: Los protocolos V-Lift y D-Lift se aprenden en una sesión de 1-2 horas. Paso 3: El producto se inyecta igual que otros AH, no hay curva de aprendizaje compleja. La diferencia está en la tecnología del producto, no en la técnica de inyección. Paso 4: Ofrecemos acompañamiento en los primeros 2-3 casos para asegurar confianza. Paso 5: El tiempo invertido se compensa con pacientes más satisfechos."
+    },
+    {
+      "id": 111,
+      "categoria": "objeciones",
+      "pregunta": "El doctor dice que necesita ver evidencia científica",
+      "respuesta": "Respuesta ideal: \"Totalmente de acuerdo, la evidencia es fundamental.\" Evidencia disponible: Estudio clínico con 32 pacientes documentado con Antera 3D y ultrasonido cutáneo, estudio de citotoxicidad in vitro (48h sin toxicidad en células vivas), comparativa de reticulantes DVS vs BDDE (peso molecular, estructura, residuos), documentación de Marcado CE Clase III (el más exigente), fabricación GMP verificada. Enviar todo el dossier científico y programar una segunda visita para resolver dudas."
+    },
+    {
+      "id": 112,
+      "categoria": "objeciones",
+      "pregunta": "El doctor tiene exclusividad con otra marca",
+      "respuesta": "Paso 1: Respetar el acuerdo existente. Paso 2: Preguntar si la exclusividad cubre TODOS los productos o solo rellenos. BioPRO es un biomodulador, categoría diferente a los rellenos convencionales. Paso 3: BioPRO no compite con rellenos, es complementario. Paso 4: Si la exclusividad es total, mantener contacto y dejar material para cuando finalice el acuerdo. Paso 5: Ofrecer ser la segunda marca para comparar resultados cuando el contrato lo permita."
+    },
+    {
+      "id": 113,
+      "categoria": "objeciones",
+      "pregunta": "El doctor dice que el descuento no es suficiente",
+      "respuesta": "No bajar precio directamente, sino aumentar valor percibido. Opciones: descuento por volumen progresivo (5%, 10%, 15%), unidades de regalo en primer pedido grande, formación gratuita incluida (valor añadido), material de marketing para su clínica, acceso prioritario a workshops, programa de fidelización. Calcular con el doctor cuántas unidades usa al mes y mostrar el ahorro real con descuento por volumen. Si compra 50+ unidades al mes, el 15% de descuento es significativo."
+    },
+    {
+      "id": 114,
+      "categoria": "productos_biopro",
+      "pregunta": "¿BioPRO sirve para prevención en pacientes jóvenes?",
+      "respuesta": "Sí, BioPRO es excelente para prevención del envejecimiento en pacientes de 28-35 años que aún no necesitan rellenos pero quieren mantener la calidad de su piel. El protocolo preventivo utiliza D-Lift (más sutil, menos invasivo). La triple acción celular activa los fibroblastos para mantener la producción de colágeno, elastina y proteoglicanos antes de que el envejecimiento sea visible. 2-3 sesiones anuales como mantenimiento preventivo. Argumento comercial: el paciente joven que empieza a prevenir es un paciente fiel a largo plazo."
+    },
+    {
+      "id": 115,
+      "categoria": "productos_biopro",
+      "pregunta": "¿Se puede usar BioPRO en pacientes con acné activo?",
+      "respuesta": "No se recomienda tratar con BioPRO si hay acné inflamatorio activo (pústulas, nódulos, quistes) en la zona de tratamiento, por riesgo de infección y empeoramiento. Si el acné está controlado (solo comedones residuales o cicatrices): se puede tratar con precaución, evitando las lesiones activas. BioPRO puede mejorar la textura de cicatrices de acné post-inflamatorias al regenerar la matriz extracelular. Esperar a que el acné esté controlado con tratamiento dermatológico antes de iniciar BioPRO."
+    },
+    {
+      "id": 116,
+      "categoria": "productos_biopro",
+      "pregunta": "¿Qué resultados se esperan después de cada sesión de BioPRO?",
+      "respuesta": "Tras la 1ª sesión: hidratación inmediata, luminosidad mejorada, piel más tersa al tacto, efecto visible en 7-10 días. Tras la 2ª sesión: mejora de textura cutánea, inicio del efecto lifting, líneas finas suavizadas, piel más firme. Tras la 3ª sesión: lifting completo, firmeza evidente, óvalo facial mejorado, aspecto rejuvenecido natural. Resultado óptimo: 4 semanas después de la 3ª sesión. Los resultados son acumulativos y progresivos, se construyen sesión a sesión."
+    },
+    {
+      "id": 117,
+      "categoria": "productos_fbio_dvs",
+      "pregunta": "¿Puedo usar FBio DVS Light para manos?",
+      "respuesta": "Sí, FBio DVS Light es adecuado para rejuvenecimiento del dorso de las manos. Instrumento: cánula 22G-50mm obligatorio (zona con múltiples venas superficiales). Punto de entrada único en la parte distal del dorso. Técnica: fanning subdérmico en abanico, 0.5-1ml por mano. Depositar lentamente entre los metacarpianos. Evitar inyección directa sobre venas visibles. Resultado: piel más gruesa, menos traslúcida, tendones y venas menos visibles. Complementar con BioPRO para mejorar calidad de piel."
+    },
+    {
+      "id": 118,
+      "categoria": "productos_fbio_dvs",
+      "pregunta": "¿Cuántas unidades de FBio DVS necesito para un tratamiento facial completo?",
+      "respuesta": "Tratamiento facial completo estimado: Surco lagrimal 0.5-1ml (1 jeringa Light), Pómulos 1-3ml (1-3 jeringas Medium), Surco nasolabial 1-2ml (1-2 jeringas Medium), Labios 0.5-1.5ml (1 jeringa Light o Medium), Arrugas marioneta 0.5-1ml (1 jeringa Medium), Mentón 0.5-1.5ml (1 jeringa Volume), Mandíbula 1-3ml (1-3 jeringas Volume). Total estimado: 5-13 jeringas según necesidad. Se puede distribuir en 2-3 sesiones. Siempre empezar conservador y añadir en retoque."
+    },
+    {
+      "id": 119,
+      "categoria": "protocolos_aplicacion",
+      "pregunta": "¿Cuál es la velocidad de inyección recomendada?",
+      "respuesta": "La velocidad de inyección debe ser lenta y controlada en todos los productos Novacutan. Con aguja: depositar 0.05-0.1ml por segundo, nunca inyectar rápidamente (riesgo de disrupción tisular). Con cánula: avanzar lentamente sintiendo la resistencia del tejido, depositar en retrotrazante a 0.05-0.1ml por centímetro de avance. En zonas de riesgo (ojeras, nariz, temporal): aún más lento, 0.02-0.05ml por segundo. La inyección lenta reduce dolor, edema y riesgo de complicaciones vasculares."
+    },
+    {
+      "id": 120,
+      "categoria": "protocolos_aplicacion",
+      "pregunta": "¿Se necesita anestesia tópica antes del tratamiento?",
+      "respuesta": "Los productos Novacutan no contienen lidocaína integrada, por lo que la anestesia tópica es recomendable para mayor confort del paciente. Opciones: crema anestésica EMLA o similar (lidocaína 2.5% + prilocaína 2.5%) aplicada 20-30 minutos antes bajo oclusión, bloqueo nervioso en zonas específicas (labios: nervio infraorbitario y mentoniano), frío local (hielo o dispositivo de enfriamiento). Para BioPRO con protocolo D-Lift: anestesia tópica suele ser suficiente. Para rellenos FBio DVS: valorar bloqueo nervioso según zona."
+    },
+    {
+      "id": 121,
+      "categoria": "protocolos_aplicacion",
+      "pregunta": "¿Qué hacer si el producto sale por el punto de inyección?",
+      "respuesta": "Si el producto refluye por el punto de entrada: la inyección fue demasiado superficial o el volumen por punto excesivo. Acciones: 1) Aplicar presión suave con gasa estéril durante 30 segundos. 2) Reducir el volumen por depósito en inyecciones siguientes. 3) Inyectar más profundo (buscar plano supraperióstico o subdérmico profundo). 4) Con cánula: avanzar más antes de depositar. 5) Nunca intentar reinyectar el producto que salió. El reflujo menor es normal y no afecta significativamente al resultado final."
+    },
+    {
+      "id": 122,
+      "categoria": "protocolos_aplicacion",
+      "pregunta": "¿Qué antisepsia se recomienda antes del tratamiento?",
+      "respuesta": "Protocolo de asepsia estándar: 1) Desmaquillar completamente la zona con limpiador suave. 2) Limpiar con solución antiséptica: clorhexidina 0.5-2% (preferido) o povidona yodada (si no hay alergia al yodo). 3) Dejar secar completamente antes de inyectar. 4) NO usar alcohol solo (desecante, no residual). 5) Evitar tocar la zona después de la desinfección. 6) Guantes estériles para el inyector. 7) Preparar el material estéril en campo limpio. La asepsia rigurosa es la mejor prevención de infecciones."
+    },
+    {
+      "id": 123,
+      "categoria": "protocolos_aplicacion",
+      "pregunta": "¿Puedo combinar BioPRO con PRP (plasma rico en plaquetas)?",
+      "respuesta": "Sí, la combinación BioPRO + PRP es sinérgica y potencia los resultados. BioPRO regenera la matriz extracelular y activa fibroblastos, mientras el PRP aporta factores de crecimiento que complementan la regeneración. Protocolo: misma sesión posible (primero BioPRO subdérmico, luego PRP en mesoterapia superficial) o sesiones alternas (una semana BioPRO, siguiente semana PRP). La combinación es especialmente potente para rejuvenecimiento integral y mejora de calidad de piel."
+    },
+    {
+      "id": 124,
+      "categoria": "protocolos_aplicacion",
+      "pregunta": "¿Se puede reutilizar una jeringa abierta de Novacutan?",
+      "respuesta": "NO, absolutamente no. Una vez abierta la jeringa, el producto debe usarse inmediatamente en la misma sesión y en el mismo paciente. No se puede guardar producto sobrante para uso posterior, ya que se rompe la esterilidad del producto. Si sobra producto en la jeringa tras completar el tratamiento, se debe desechar siguiendo normativa de residuos sanitarios. Cada caja contiene una jeringa individual estéril con adhesivos de trazabilidad asignados a un solo uso."
+    },
+    {
+      "id": 125,
+      "categoria": "empresa_marca",
+      "pregunta": "¿En qué países está disponible Novacutan?",
+      "respuesta": "Novacutan se distribuye en más de 30 países a nivel mundial. La distribución es gestionada por Laboratoires Fijie France desde su sede en París. La presencia internacional confirma la confianza global en la tecnología 3DVS y la calidad del producto. Para información específica sobre disponibilidad en un país concreto, consultar con el departamento de exportación de Fijie France."
+    },
+    {
+      "id": 126,
+      "categoria": "empresa_marca",
+      "pregunta": "¿Desde cuándo existe Novacutan?",
+      "respuesta": "La gama FBio DVS (rellenos dérmicos) está registrada desde 2014, lo que le da más de 10 años de trayectoria en el mercado. BioPRO (biomodulador) se registró en 2019. Laboratoires Fijie France cuenta con más de 10 años de experiencia en medicina estética inyectable. Esta trayectoria demuestra estabilidad y compromiso a largo plazo con el sector, no es una marca oportunista que aparece y desaparece."
+    },
+    {
+      "id": 127,
+      "categoria": "tecnologia_dvs",
+      "pregunta": "¿Qué son las microesferas 3D?",
+      "respuesta": "Las microesferas 3D son la estructura tridimensional que adopta el ácido hialurónico reticulado con DVS. A diferencia del gel lineal que crean otros reticulantes como BDDE, el DVS forma esferas porosas tridimensionales que se integran mejor en la matriz extracelular. Esta estructura porosa permite la entrada y salida de nutrientes y agua, facilitando la interacción con las células del tejido. Las microesferas son responsables de la biodegradación por etapas (superficie primero, núcleo al final) y del menor edema post-tratamiento."
+    },
+    {
+      "id": 128,
+      "categoria": "tecnologia_dvs",
+      "pregunta": "¿Qué significa reticulación intra e intermolecular?",
+      "respuesta": "La reticulación intermolecular crea puentes ENTRE diferentes cadenas de ácido hialurónico (como puentes entre dos cuerdas paralelas). La reticulación intramolecular crea puentes DENTRO de la misma cadena de ácido hialurónico (como nudos dentro de una misma cuerda). DVS permite AMBOS tipos de reticulación, creando una estructura 3D más compleja y estable. BDDE solo permite reticulación intermolecular, resultando en estructuras lineales más simples. La doble reticulación de DVS explica la mayor estabilidad y duración del producto."
+    },
+    {
+      "id": 129,
+      "categoria": "tecnologia_dvs",
+      "pregunta": "¿Qué son los residuos no reticulados y por qué importan?",
+      "respuesta": "Los residuos no reticulados son moléculas de reticulante que no se unieron correctamente a las cadenas de ácido hialurónico durante la fabricación. Son potencialmente irritantes y pueden causar inflamación. Con DVS, los residuos no reticulados son casi nulos gracias al menor peso molecular del reticulante y su mayor eficiencia de unión. Con BDDE, el riesgo de residuos es mayor porque su molécula más grande es menos eficiente. Menos residuos = menos inflamación = menos edema = mejor perfil de seguridad."
+    },
+    {
+      "id": 130,
+      "categoria": "tecnologia_dvs",
+      "pregunta": "¿Por qué el ácido hialurónico de Novacutan es de origen no animal?",
+      "respuesta": "El ácido hialurónico de Novacutan se obtiene por fermentación bacteriana (biotecnología), no de origen animal (cresta de gallo). Ventajas: menor riesgo de reacciones alérgicas, sin riesgo de contaminación por proteínas animales, producción más controlada y reproducible, mayor pureza del producto final, apto para pacientes con objeciones éticas a productos de origen animal. La fermentación bacteriana es el estándar de oro actual en la producción de ácido hialurónico para uso estético."
+    },
+    {
+      "id": 131,
+      "categoria": "productos_biopro",
+      "pregunta": "¿Cuál es la diferencia entre biomodulador y bioestimulador?",
+      "respuesta": "BioPRO se define como biomodulador de matriz celular, no simplemente bioestimulador. La diferencia es significativa: un bioestimulador (como Profhilo) estimula las células desde el exterior (nivel extracelular). Un biomodulador como BioPRO MODULA la actividad celular a 3 niveles: regenera la matriz extracelular, hidrata las células desde el interior (nivel intracelular), y activa las mitocondrias para producir ATP (nivel subcelular). Es una acción más profunda y completa que la simple bioestimulación."
+    },
+    {
+      "id": 132,
+      "categoria": "productos_biopro",
+      "pregunta": "¿Cómo actúa BioPRO a nivel de las mitocondrias?",
+      "respuesta": "BioPRO es el único biomodulador que actúa a nivel subcelular, específicamente en las mitocondrias de los fibroblastos. Activa la producción de ATP (adenosín trifosfato), que es la moneda energética de la célula. Con más ATP disponible, los fibroblastos tienen más energía para producir colágeno, elastina y proteoglicanos propios. Esto significa una regeneración activa y real del tejido, no solo un efecto mecánico de hidratación. Esta acción subcelular es única en el mercado de biomoduladores."
+    },
+    {
+      "id": 133,
+      "categoria": "comparativas_competencia",
+      "pregunta": "¿Qué diferencia hay entre la técnica BAP de Profhilo y los protocolos de BioPRO?",
+      "respuesta": "Profhilo usa técnica BAP (Bio Aesthetic Points): 5 puntos fijos por lado de la cara, inyección en bolus subdérmico, protocolo rígido. BioPRO ofrece dos protocolos flexibles: V-Lift (cánula, fanning subdérmico, 4 puntos de entrada por lado, mayor cobertura) y D-Lift (aguja, 10-15 puntos distribuidos, más personalizable). Los protocolos de BioPRO se adaptan a la anatomía individual del paciente, mientras que BAP aplica los mismos 5 puntos a todos. Además, BioPRO ofrece efecto lifting real, no solo hidratación."
+    },
+    {
+      "id": 134,
+      "categoria": "comparativas_competencia",
+      "pregunta": "¿Cómo se compara el edema post-tratamiento de Novacutan vs otros productos?",
+      "respuesta": "El edema con productos Novacutan es significativamente menor gracias a la tecnología DVS. DVS crea microesferas que absorben menos agua que las estructuras lineales del BDDE. En la práctica: con BioPRO el edema es leve y dura 24-48 horas. Con FBio DVS los rellenos presentan edema mínimo de 2-3 días. Comparativamente, productos con BDDE generan edema moderado de 5-7 días. Esto significa menos inconvenientes para el paciente, retorno más rápido a la vida social, y menos llamadas de preocupación al médico."
+    },
+    {
+      "id": 135,
+      "categoria": "comparativas_competencia",
+      "pregunta": "¿Por qué Novacutan produce resultados más naturales?",
+      "respuesta": "Tres factores: 1) Las microesferas 3D porosas se integran en el tejido permitiendo el paso de nutrientes y agua, creando una interacción natural con la matriz extracelular (vs gel compacto que se queda como un cuerpo extraño). 2) La triple acción celular estimula la producción de colágeno, elastina y proteoglicanos propios del paciente, por lo que el resultado es tejido propio regenerado. 3) La biodegradación por etapas evita cambios bruscos en el aspecto. Todo junto produce un resultado que se ve y se siente natural."
+    },
+    {
+      "id": 136,
+      "categoria": "objeciones",
+      "pregunta": "El doctor dice que sus pacientes están satisfechos con Profhilo y no quiere cambiar",
+      "respuesta": "Paso 1 validar: \"Profhilo es un buen producto, es normal que funcione bien.\" Paso 2 diferenciar: \"BioPRO no reemplaza a Profhilo, lo supera. ¿Sus pacientes obtienen efecto lifting con Profhilo? ¿Duran los resultados más de 6 meses?\" Paso 3 presentar datos: BioPRO actúa en 3 niveles vs 1 nivel, dura 12+ meses vs 6, ofrece lifting real + regeneración vs solo hidratación. Paso 4 propuesta: \"Pruebe con 3 pacientes que no estén satisfechos con el resultado de Profhilo y compare. Si BioPRO no es mejor, no le pediré nada más.\""
+    },
+    {
+      "id": 137,
+      "categoria": "objeciones",
+      "pregunta": "El doctor dice que solo trabaja con Allergan/Galderma",
+      "respuesta": "Paso 1 respetar: \"Son marcas importantes con buena reputación.\" Paso 2 posicionar como complemento: \"Novacutan no compite con sus rellenos Juvederm/Restylane. BioPRO es un biomodulador de triple acción celular que complementa perfectamente a cualquier relleno.\" Paso 3: \"Los mejores doctores tienen varias herramientas en su arsenal. BioPRO les da algo que Allergan/Galderma no tienen: regeneración a nivel subcelular.\" Paso 4: \"Puede seguir usando sus rellenos habituales y añadir BioPRO como biomodulador exclusivo.\""
+    },
+    {
+      "id": 138,
+      "categoria": "objeciones",
+      "pregunta": "El doctor dice que el producto se fabrica en Corea y eso le genera desconfianza",
+      "respuesta": "Paso 1 contextualizar: \"Corea del Sur es líder mundial en tecnología estética y cosmética. Empresas como Samsung, LG, Hyundai demuestran la calidad industrial coreana.\" Paso 2: La fabricación cumple normas GMP internacionales (las mismas que cualquier fábrica europea). Paso 3: El control de calidad y distribución es de Laboratoires Fijie France, con sede en París. Paso 4: Marcado CE Clase III otorgado por organismos notificados europeos que inspeccionan la fábrica. Paso 5: Muchos de los mejores productos estéticos del mercado se fabrican en Corea."
+    },
+    {
+      "id": 139,
+      "categoria": "seguridad_contraindicaciones",
+      "pregunta": "¿Puedo tratar a un paciente que está tomando isotretinoína (Roacutan)?",
+      "respuesta": "No se recomienda tratar con inyectables faciales durante el tratamiento con isotretinoína ni en los 6 meses posteriores a su finalización. La isotretinoína adelgaza la piel, afecta la cicatrización, aumenta el riesgo de cicatrices hipertróficas, y puede alterar la respuesta inflamatoria. Tras 6 meses de suspensión, la piel se ha recuperado y se puede tratar con normalidad. Esta precaución aplica tanto a BioPRO como a los rellenos FBio DVS."
+    },
+    {
+      "id": 140,
+      "categoria": "seguridad_contraindicaciones",
+      "pregunta": "¿Y si el paciente tiene prótesis metálicas faciales o implantes dentales?",
+      "respuesta": "Los implantes dentales no son contraindicación para tratamientos con Novacutan, pero se deben tener precauciones: evitar inyectar directamente sobre la zona del implante dental, mantener distancia prudente con agujas. Prótesis metálicas faciales (placas de osteosíntesis): no son contraindicación absoluta, pero el producto puede comportarse de forma diferente sobre metal. Informar al paciente y documentar la presencia de implantes. La cánula es preferible a la aguja en zonas cercanas a prótesis metálicas."
+    },
+    {
+      "id": 141,
+      "categoria": "seguridad_contraindicaciones",
+      "pregunta": "¿Puede tratarse un paciente que se vacunó recientemente?",
+      "respuesta": "Se recomienda esperar 2 semanas después de cualquier vacunación antes de realizar tratamientos con ácido hialurónico. Esto se debe a que las vacunas estimulan el sistema inmune y existe un riesgo teórico de reacción inflamatoria exagerada o formación de granulomas en el sitio de inyección del relleno. Igualmente, después del tratamiento con Novacutan, esperar 2 semanas antes de vacunarse. Esta precaución es especialmente relevante con vacunas que generan fuerte respuesta inmune."
+    },
+    {
+      "id": 142,
+      "categoria": "complicaciones",
+      "pregunta": "¿Qué es el biofilm y cómo se maneja?",
+      "respuesta": "El biofilm es una comunidad de bacterias que se adhieren a la superficie del relleno dérmico y se protegen con una matriz extracelular propia, haciéndolas resistentes a antibióticos convencionales. Se presenta como inflamación crónica recurrente, semanas o meses después del tratamiento. Signos: hinchazón intermitente, enrojecimiento que va y viene, dolor leve persistente. Tratamiento: antibioterapia prolongada combinada (claritromicina + fluoroquinolona, 4-6 semanas), seguido de disolución con hialuronidasa una vez controlada la infección. Prevención: asepsia rigurosa, evitar hablar durante la inyección labial."
+    },
+    {
+      "id": 143,
+      "categoria": "complicaciones",
+      "pregunta": "¿Qué hago si hay necrosis cutánea?",
+      "respuesta": "La necrosis cutánea es la consecuencia de un compromiso vascular no resuelto a tiempo. Signos: piel que cambia de blanca a violácea y luego a negra. ACCIÓN URGENTE: si se detecta temprano, aplicar protocolo de compromiso vascular (hialuronidasa 150-300 UI, compresas calientes, nitroglicerina tópica, AAS). Si la necrosis ya está establecida: derivar a urgencias, cuidados de herida (desbridamiento si necesario), antibioterapia preventiva, seguimiento especializado para cicatrización. Documentar todo. Es la complicación más grave de los rellenos dérmicos."
+    },
+    {
+      "id": 144,
+      "categoria": "complicaciones",
+      "pregunta": "¿Dónde debo tener siempre hialuronidasa disponible?",
+      "respuesta": "La hialuronidasa debe estar SIEMPRE disponible en cualquier consulta que realice tratamientos con ácido hialurónico. Requisitos: tener al menos 2 viales disponibles antes de cada sesión, verificar fecha de caducidad regularmente, saber reconstituir y dosificar sin dudar. Conservación: según indicaciones del fabricante (generalmente refrigerada). Marcas comunes: Hyalase (150 UI/vial), Hylenex (150 UI/ml). Todo el equipo de la clínica debe saber dónde está y cómo usarla. Es el seguro de vida de los tratamientos con AH."
+    },
+    {
+      "id": 145,
+      "categoria": "cuidados_post",
+      "pregunta": "¿Cuánto edema es normal después de BioPRO?",
+      "respuesta": "Con BioPRO, el edema es significativamente menor que con otros productos gracias a la tecnología DVS. Edema normal: leve hinchazón simétrica en las primeras 24-48 horas, sin dolor intenso, que se resuelve progresivamente en 3-5 días. Máximo edema: día 1-2 post-tratamiento. Con protocolo V-Lift (cánula): edema mínimo, casi imperceptible. Con protocolo D-Lift (aguja): edema leve por los múltiples puntos de inyección. Si el edema persiste más de 7 días o es asimétrico, contactar al médico."
+    },
+    {
+      "id": 146,
+      "categoria": "cuidados_post",
+      "pregunta": "¿Qué analgésico se recomienda post-tratamiento?",
+      "respuesta": "Paracetamol (acetaminofeno) es el analgésico de primera elección: 500-1000mg cada 8 horas según necesidad. EVITAR ibuprofeno y otros AINEs en las primeras 24-48 horas ya que pueden aumentar el riesgo de hematomas por su efecto antiagregante. EVITAR aspirina por la misma razón. Si el dolor es intenso y no cede con paracetamol, contactar al médico (puede ser signo de complicación). El frío local intermitente (10 minutos cada hora) también ayuda a controlar el dolor y el edema."
+    },
+    {
+      "id": 147,
+      "categoria": "cuidados_post",
+      "pregunta": "¿Puede el paciente consumir alcohol después del tratamiento?",
+      "respuesta": "Se recomienda evitar el consumo de alcohol durante las primeras 24-48 horas post-tratamiento. El alcohol es vasodilatador, lo que puede aumentar el edema, el enrojecimiento y la probabilidad de hematomas. Además, el alcohol puede interferir con la respuesta inflamatoria natural necesaria para la integración del producto. Consumo moderado a partir del tercer día. Evitar excesos durante la primera semana. Esta recomendación aplica tanto para BioPRO como para los rellenos FBio DVS."
+    },
+    {
+      "id": 148,
+      "categoria": "cuidados_post",
+      "pregunta": "¿Cuándo puede el paciente hacerse un tratamiento dental después de rellenos faciales?",
+      "respuesta": "Se recomienda esperar al menos 2 semanas después de un tratamiento con rellenos faciales antes de realizar procedimientos dentales. Esto se debe al riesgo de bacteriemia que puede colonizar el producto inyectado. Para limpieza dental rutinaria: esperar 1-2 semanas. Para procedimientos invasivos (extracciones, implantes): esperar 2-4 semanas. Especialmente importante si se trató zona de labios, surcos nasogenianos o mentón. Informar al dentista de que tiene rellenos faciales recientes."
+    },
+    {
+      "id": 149,
+      "categoria": "zonas_tecnicas",
+      "pregunta": "¿Cómo tratar las arrugas periorbiculares (patas de gallo)?",
+      "respuesta": "Las arrugas periorbiculares son predominantemente dinámicas, por lo que la primera línea es toxina botulínica. Sin embargo, BioPRO puede complementar mejorando la calidad de la piel periorbicular. Producto: BioPRO con protocolo D-Lift, microinyecciones de 0.02-0.05ml con aguja 31G en el área temporal lateral. NO usar rellenos FBio DVS en esta zona (piel muy fina, riesgo Tyndall). Para arrugas estáticas residuales: BioPRO + toxina botulínica en sesiones combinadas."
+    },
+    {
+      "id": 150,
+      "categoria": "zonas_tecnicas",
+      "pregunta": "¿Cómo tratar las líneas de fumador (código de barras)?",
+      "respuesta": "Producto: FBio DVS Light (corrección sutil necesaria en zona de piel fina). Aguja 30G, 0.02-0.05ml por arruga. Técnica: inyección lineal retrotrazante intradérmica superficial a lo largo de cada arruga. Volumen total: 0.2-0.5ml para el labio superior completo. Complementar con BioPRO para mejorar la calidad de la piel peribucal. Para mejores resultados combinar con toxina botulínica en orbicular de los labios (2-4 UI por lado). Resultado visible en 7-10 días. Revisión a las 2 semanas para retoque."
+    },
+    {
+      "id": 151,
+      "categoria": "zonas_tecnicas",
+      "pregunta": "Paciente mujer 55 años con pérdida de volumen generalizada",
+      "respuesta": "Plan de tratamiento integral en fases. Fase 1 (mes 1-3): Ciclo BioPRO completo (3 sesiones V-Lift cada 3-4 semanas) para regenerar calidad de piel y efecto lifting global. Fase 2 (mes 4): Rellenos FBio DVS en zonas de pérdida de volumen específicas: pómulos con Medium (1-2ml/lado), surcos nasolabiales con Medium (0.5-1ml/lado), mentón con Volume si necesario. Fase 3 (mes 5): Retoques y ajustes. Mantenimiento: BioPRO 1-2 sesiones anuales + retoque rellenos cada 8-12 meses."
+    },
+    {
+      "id": 152,
+      "categoria": "zonas_tecnicas",
+      "pregunta": "¿Cómo tratar los pliegues prementoniano (surcos del mentón)?",
+      "respuesta": "Producto: FBio DVS Medium. Volumen: 0.3-0.5ml por lado. Instrumento: cánula 22G-50mm preferido o aguja 27G. Técnica: inyección subdérmica profunda en el pliegue prementoniano, de lateral a medial. Si el pliegue es profundo, primero dar soporte con FBio DVS Volume en bolus profundo supraperióstico y luego suavizar con Medium. Complementar con proyección de mentón si es retruido (FBio Volume central). Resultado: mejora de la expresión del tercio inferior y armonización del perfil."
+    },
+    {
+      "id": 153,
+      "categoria": "protocolos_aplicacion",
+      "pregunta": "¿Cuánto producto se desperdicia en la jeringa y la cánula?",
+      "respuesta": "En la jeringa: el espacio muerto es mínimo (0.05-0.1ml) gracias al diseño de jeringa Luer-lock. En la cánula 22G-50mm: aproximadamente 0.05ml de espacio muerto. En agujas: menos de 0.02ml. Total estimado: 0.05-0.15ml por jeringa. Para minimizar: purgar la cánula/aguja antes de inyectar en el paciente (depositar la primera gota sobre la gasa). Con BioPRO (2ml): el desperdicio representa menos del 5%. Con FBio DVS (1ml): puede representar hasta el 10-15%, por lo que optimizar cada ml es importante."
+    },
+    {
+      "id": 154,
+      "categoria": "protocolos_aplicacion",
+      "pregunta": "¿Cómo documentar el tratamiento correctamente?",
+      "respuesta": "Documentación obligatoria: 1) Consentimiento informado firmado antes de cada tratamiento. 2) Fotografías estandarizadas antes y después (frontal, laterales 45°, perfil, con misma iluminación). 3) Registro del producto: nombre, lote, fecha caducidad, adhesivos de trazabilidad (uno para historia clínica, otro para paciente). 4) Zonas tratadas, producto usado, volumen por zona. 5) Técnica empleada (aguja/cánula, calibre). 6) Incidencias durante el procedimiento. 7) Instrucciones post-tratamiento entregadas. Esta documentación es esencial para seguimiento clínico y protección legal."
+    },
+    {
+      "id": 155,
+      "categoria": "protocolos_aplicacion",
+      "pregunta": "¿Cuál es el protocolo completo de una sesión de BioPRO V-Lift?",
+      "respuesta": "Paso 1: Recibir al paciente, revisar consentimiento, verificar contraindicaciones. Paso 2: Fotografías estandarizadas. Paso 3: Desmaquillar y limpiar la piel. Paso 4: Aplicar anestesia tópica 20-30 min (opcional). Paso 5: Antisepsia con clorhexidina. Paso 6: Marcar los 4 puntos de entrada por lado (temporal, malar, preauricular, mandibular). Paso 7: Realizar punto de entrada con aguja 18G. Paso 8: Introducir cánula 22G-50/70mm subdérmica. Paso 9: Depositar en abanico 0.1-0.2ml por pasada. Paso 10: Distribuir 1ml por lado. Paso 11: Presión suave con gasa. Paso 12: Instrucciones post-tratamiento. Paso 13: Programar siguiente cita (3-4 semanas). Paso 14: Registrar tratamiento con adhesivos de trazabilidad."
+    },
+    {
+      "id": 156,
+      "categoria": "argumentos_venta",
+      "pregunta": "¿Cómo calcular la rentabilidad de Novacutan para el doctor?",
+      "respuesta": "Ejemplo de cálculo: Un ciclo de BioPRO son 3 sesiones x 1 jeringa de 2ml. Si el doctor cobra entre 250-400 euros por sesión al paciente, el ingreso por ciclo es 750-1200 euros. El coste del producto es significativamente menor, generando un margen atractivo. Además: menos retoques gratuitos (menor edema, más satisfacción), el paciente vuelve solo 1-2 veces al año para mantenimiento (ingresos recurrentes), pacientes satisfechos refieren 2-3 nuevos pacientes. Con descuento por volumen (hasta 15%), el margen mejora aún más."
+    },
+    {
+      "id": 157,
+      "categoria": "argumentos_venta",
+      "pregunta": "¿Cómo ayuda Novacutan al doctor a diferenciarse de la competencia?",
+      "respuesta": "Novacutan ofrece diferenciación real: 1) Tecnología exclusiva 3DVS no disponible en otras marcas. 2) Triple acción celular única en el mercado. 3) El doctor puede comunicar a sus pacientes que usa tecnología francesa exclusiva con menos hinchazón y más duración. 4) Posicionamiento premium: no es una marca que tengan todas las clínicas. 5) Material educativo para que el paciente entienda la diferencia. 6) Los pacientes que buscan lo mejor valorarán que su doctor esté a la vanguardia con la última tecnología."
+    },
+    {
+      "id": 158,
+      "categoria": "argumentos_venta",
+      "pregunta": "¿Cuál es el perfil ideal de paciente para BioPRO?",
+      "respuesta": "Paciente ideal para BioPRO: mujer u hombre 35-65 años, que busca rejuvenecimiento natural sin aspecto de \"relleno\", con piel deshidratada, pérdida de firmeza o flacidez leve-moderada, que valora la calidad y está dispuesto a seguir un protocolo de 3 sesiones, y que prefiere resultados progresivos y naturales. También ideal: pacientes decepcionados con otros bioestimuladores que no obtuvieron el lifting esperado, y pacientes que se quejan de exceso de hinchazón con otros productos."
+    },
+    {
+      "id": 159,
+      "categoria": "argumentos_venta",
+      "pregunta": "¿Cuál es el perfil ideal de paciente para FBio DVS?",
+      "respuesta": "FBio DVS Light: paciente que necesita corrección sutil en zonas delicadas, primera vez con rellenos, ojeras suaves, perfilado labial sutil, manos. FBio DVS Medium: paciente con surcos nasogenianos marcados, deseo de aumento labial moderado, pérdida de volumen malar, zona temporal hundida. FBio DVS Volume: paciente hombre o mujer que busca definición estructural de mandíbula y mentón, línea mandibular perdida, mentón retruido. Todos: pacientes que valoran mínima hinchazón y resultado natural."
+    },
+    {
+      "id": 160,
+      "categoria": "productos_fbio_dvs",
+      "pregunta": "¿Cuál es la cohesividad de cada producto FBio DVS?",
+      "respuesta": "La cohesividad aumenta de Light a Volume. FBio DVS Light: baja cohesividad, fluye fácilmente, ideal para zonas que requieren distribución suave y uniforme (ojeras, perioral, manos). FBio DVS Medium: cohesividad media, equilibrio entre fluir y mantener forma, adecuado para volumen y soporte moderado (pómulos, labios, nasogenianos). FBio DVS Volume: alta cohesividad, mantiene estructura y proyección, ideal para crear ángulos y soporte estructural (mandíbula, mentón). Todos a 20mg/ml de AH reticulado con DVS."
+    },
+    {
+      "id": 161,
+      "categoria": "protocolos_aplicacion",
+      "pregunta": "¿Cómo hacer el seguimiento post-ciclo de BioPRO?",
+      "respuesta": "Seguimiento recomendado: Revisión 2 semanas después de cada sesión (opcional pero recomendable para las primeras veces). Evaluación post-ciclo a las 4 semanas de la 3ª sesión: fotografías comparativas, evaluación clínica de textura, firmeza, luminosidad, óvalo facial. A los 6 meses: contactar al paciente para valorar mantenimiento del efecto. A los 10-12 meses: programar sesión de mantenimiento (1-2 sesiones). Documentar siempre con fotografías estandarizadas. El seguimiento demuestra profesionalidad y fideliza al paciente."
+    },
+    {
+      "id": 162,
+      "categoria": "seguridad_contraindicaciones",
+      "pregunta": "¿Puedo tratar a un paciente con rosácea?",
+      "respuesta": "Rosácea activa (eritema intenso, pústulas, brote): NO tratar, ya que la inyección puede empeorar la inflamación y el eritema. Rosácea controlada (sin brote activo): se puede tratar con precauciones: evitar frotar o masajear la zona excesivamente, inyección suave y poco traumática, preferir cánula sobre aguja, avisar de posible eritema aumentado temporal. BioPRO puede incluso mejorar la calidad de la piel en pacientes con rosácea leve controlada. Consultar con el dermatólogo si hay dudas sobre el control de la rosácea."
+    },
+    {
+      "id": 163,
+      "categoria": "seguridad_contraindicaciones",
+      "pregunta": "¿Es seguro tratar a pacientes con piel oscura (fototipos altos)?",
+      "respuesta": "Sí, los productos Novacutan son seguros en todos los fototipos (I-VI). Consideraciones específicas para fototipos IV-VI: mayor tendencia a hiperpigmentación post-inflamatoria (usar asepsia rigurosa y técnica atraumática), considerar tendencia a queloides (más frecuente en pieles oscuras), el edema puede ser menos visible pero está presente, evitar tratamientos agresivos que causen inflamación excesiva. Protección solar SPF 50+ post-tratamiento es aún más importante. No hay diferencia en la eficacia del producto según el fototipo."
+    },
+    {
+      "id": 164,
+      "categoria": "objeciones",
+      "pregunta": "El doctor dice que quiere ver casos antes/después antes de decidir",
+      "respuesta": "Respuesta perfecta: \"Por supuesto, es lo más inteligente.\" Ofrecer: dossier de casos clínicos del estudio con 32 pacientes (imágenes Antera 3D de antes/después), fotos de casos reales de doctores que ya usan Novacutan (con permiso), vídeo de procedimiento completo para que vea la técnica. Si es posible, organizar una visita a otro doctor que ya use Novacutan. Proponer: \"Le envío el dossier hoy. ¿Puedo llamarle la semana que viene para resolver sus dudas?\" Cerrar siempre con siguiente paso concreto."
+    },
+    {
+      "id": 165,
+      "categoria": "objeciones",
+      "pregunta": "El doctor dice que el protocolo de 3 sesiones es complicado para el paciente",
+      "respuesta": "Argumento 1: Las 3 sesiones garantizan resultados óptimos y duraderos. Es una inversión de 3 meses para 12+ meses de resultado. Argumento 2: Otros productos necesitan sesiones más frecuentes (Profhilo cada 6 meses = mismo número de sesiones al año). Argumento 3: El paciente que se compromete con 3 sesiones es un paciente motivado y fiel. Argumento 4: Si el paciente solo puede 1-2 sesiones, aún así obtiene beneficio (hidratación, luminosidad). Argumento 5: Ofrecer packs o facilidades para las 3 sesiones juntas."
+    },
+    {
+      "id": 166,
+      "categoria": "empresa_marca",
+      "pregunta": "¿Qué es Laboratoires Fijie France?",
+      "respuesta": "Laboratoires Fijie France es la empresa francesa con sede en París que comercializa y distribuye los productos Novacutan a nivel mundial. Con más de 10 años de experiencia en el sector de medicina estética inyectable, Fijie France se encarga del control de calidad, la distribución, el registro regulatorio y el soporte científico-comercial. La empresa está enfocada exclusivamente en productos de alta calidad para medicina estética, con la tecnología 3DVS como su diferencial competitivo."
+    },
+    {
+      "id": 167,
+      "categoria": "productos_biopro",
+      "pregunta": "¿Qué ventaja tiene BioPRO sobre los bioestimuladores con polinucleótidos?",
+      "respuesta": "Los bioestimuladores con polinucleótidos (PDRN/PN) actúan a nivel extracelular estimulando la reparación tisular. BioPRO actúa en 3 niveles (extracelular, intracelular, subcelular), lo que incluye activación mitocondrial para producción de ATP. BioPRO tiene efecto lifting gracias a la estructura reticulada 3DVS, mientras los polinucleótidos no ofrecen soporte mecánico. BioPRO dura 12+ meses vs 3-6 meses de los polinucleótidos. Además, BioPRO incluye hidratación + regeneración + lifting en un solo producto, vs solo regeneración de los PN."
+    },
+    {
+      "id": 168,
+      "categoria": "protocolos_aplicacion",
+      "pregunta": "¿Cómo elegir entre V-Lift y D-Lift para BioPRO?",
+      "respuesta": "Elegir V-Lift cuando: paciente con flacidez moderada-severa, se busca efecto lifting máximo, doctor experimentado con cánula, primera vez con BioPRO (mejor resultado inicial). Elegir D-Lift cuando: paciente con flacidez leve, sesiones de mantenimiento, doctor menos experimentado con cánula, complemento a otros tratamientos, sesiones rápidas en agenda apretada. Se pueden alternar: iniciar con V-Lift (sesiones 1-3) y mantener con D-Lift (sesiones anuales). El V-Lift ofrece mayor cobertura y distribución, el D-Lift es más rápido y puntual."
+    },
+    {
+      "id": 169,
+      "categoria": "productos_fbio_dvs",
+      "pregunta": "¿Cuánto dura cada producto FBio DVS según la zona?",
+      "respuesta": "La duración varía según la zona y el producto. FBio DVS Light: ojeras 8-12 meses, contorno labial 6-8 meses, manos 6-9 meses. FBio DVS Medium: labios 6-9 meses, pómulos 9-12 meses, surcos nasogenianos 8-12 meses. FBio DVS Volume: mentón 12-15 meses, ángulo mandibular 12-18 meses, línea mandibular 10-14 meses. Las zonas de alta movilidad (labios) degradan más rápido. Las zonas sobre hueso (mentón, mandíbula) duran más. La biodegradación por etapas de DVS optimiza la duración en todas las zonas."
+    },
+    {
+      "id": 170,
+      "categoria": "argumentos_venta",
+      "pregunta": "¿Cómo manejar la primera llamada telefónica con un doctor nuevo?",
+      "respuesta": "Estructura de la llamada (máximo 3 minutos): 1) Presentación: nombre, empresa Novacutan, Laboratoires Fijie France. 2) Motivo: presentar tecnología exclusiva 3DVS para medicina estética. 3) Gancho: \"Doctor, ¿le interesaría conocer el único biomodulador con triple acción celular que produce menos edema y dura más de 12 meses?\" 4) Si hay interés: proponer visita presencial de 15 minutos. 5) Si no hay interés: preguntar cuándo sería mejor momento. 6) Cierre: confirmar fecha y hora de visita, enviar email de confirmación con breve presentación adjunta. Nunca intentar vender por teléfono, el objetivo es conseguir la visita."
+    }
+  ]
+}

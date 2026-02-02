@@ -1,0 +1,32 @@
+{
+  "name": "Novia - Novacutan",
+  "short_name": "Novia",
+  "description": "Asistente inteligente de Novacutan para profesionales de medicina estética",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FBF8FF",
+  "theme_color": "#2D5BA0",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/static/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/static/icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/static/icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["medical", "business", "productivity"],
+  "lang": "es-MX"
+}
