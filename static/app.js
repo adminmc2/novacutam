@@ -592,9 +592,9 @@ function escapeHtml(str) {
 // Tareas mock con fechas reales relativas a hoy (27 enero 2026)
 const PLAN_TASKS = [
     // --- En proceso (fecha de hoy) ---
-    { id: 1, title: 'Visita Dr. García — Cardiología', date: '2026-01-27', project: 'visitas', status: 'in_progress', tasks: 2, subtasks: 1 },
-    { id: 2, title: 'Estudiar ficha Natural DHA', date: '2026-01-27', project: 'formacion', status: 'in_progress', tasks: 1, subtasks: 0 },
-    { id: 3, title: 'Preparar argumentario Ginecología', date: '2026-01-27', project: 'visitas', status: 'in_progress', tasks: 3, subtasks: 2 },
+    { id: 1, title: 'Visita Dra. García — Dermatología', date: '2026-01-27', project: 'visitas', status: 'in_progress', tasks: 2, subtasks: 1 },
+    { id: 2, title: 'Estudiar ficha BioPRO', date: '2026-01-27', project: 'formacion', status: 'in_progress', tasks: 1, subtasks: 0 },
+    { id: 3, title: 'Preparar argumentario Cirugía Plástica', date: '2026-01-27', project: 'visitas', status: 'in_progress', tasks: 3, subtasks: 2 },
     // --- Por hacer (futuro cercano) ---
     { id: 4, title: 'Visita Dra. López — Pediatría', date: '2026-01-28', project: 'visitas', status: 'todo', tasks: 2, subtasks: 0 },
     { id: 5, title: 'Informe semanal de ventas', date: '2026-01-29', project: 'admin', status: 'todo', tasks: 1, subtasks: 0 },
@@ -1056,8 +1056,8 @@ const ICON_MAP_TABLE = {
     'dato':           'chart-bar',
     'detalle':        'info',
     'componente':     'flask',
-    'epa':            'drop',
-    'dha':            'drop',
+    'vlift':          'activity',
+    'dlift':          'activity',
     'forma':          'shapes',
     'certificación':  'seal-check',
     'certificacion':  'seal-check',

@@ -265,8 +265,8 @@ class RAGEngine:
         all_tokens = tokens | tokens_stemmed
 
         # Palabras clave de alta importancia (boost extra)
-        high_value_terms = {'concentrado', 'concentracion', 'potente', 'embarazo',
-                           'cardiovascular', 'corazon', 'cerebro', 'precio'}
+        high_value_terms = {'biopro', 'fbio', 'dvs', '3dvs', 'biomodulador',
+                           'lifting', 'relleno', 'protocolo', 'precio'}
 
         # Expandir con sinónimos
         expanded_tokens = set(all_tokens)

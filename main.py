@@ -699,7 +699,7 @@ REGLAS OBLIGATORIAS:
 2. NO añadas datos externos. Si necesitas mencionar algo fuera del contexto, di "según consenso médico general" SIN cifras.
 3. Si una sección de tu formato no tiene datos verificados, OMÍTELA entera. No incluyas tablas con celdas vacías ni secciones sin contenido real.
 4. Aprovecha al MÁXIMO los datos que SÍ tienes: preséntelos de forma persuasiva, clara y útil para vender.
-5. PROHIBIDO EXTRAPOLAR INDICACIONES: Si un producto aparece en los datos verificados con indicación X, NO lo recomiendes para indicación Y. Solo recomienda cada producto para las indicaciones que EXPLÍCITAMENTE aparecen en los datos verificados. Ejemplo: si un producto está indicado para "función cardiovascular", NO lo recomiendes para oncología a menos que los datos verificados digan EXPLÍCITAMENTE que tiene indicación oncológica.
+5. PROHIBIDO EXTRAPOLAR INDICACIONES: Si un producto aparece en los datos verificados con indicación X, NO lo recomiendes para indicación Y. Solo recomienda cada producto para las indicaciones que EXPLÍCITAMENTE aparecen en los datos verificados. Ejemplo: si un producto está indicado para "flacidez facial", NO lo recomiendes para relleno labial a menos que los datos verificados digan EXPLÍCITAMENTE que tiene esa indicación.
 6. Menciona SOLO los productos que tengan indicación EXPLÍCITA para la condición consultada en los datos verificados."""
                 else:
                     rag_instruction = """COBERTURA RAG: ALTA — Tienes buenos datos verificados arriba.
@@ -721,11 +721,11 @@ PROHIBIDO EXTRAPOLAR INDICACIONES: Recomienda cada producto SOLO para las indica
 
 | Parámetro | Valor |
 |-----------|-------|
-| (los 3-4 datos más importantes: EPA, DHA, forma, concentración) |
+| (los 3-4 datos más importantes: composición, volumen, reticulante, zona) |
 
 **Indicación principal**: Una frase directa con FAB.
 
-**Posología**: Dosis y frecuencia en una línea.
+**Protocolo**: Técnica y sesiones en una línea.
 
 **Dato diferenciador**
 > Frase clave FAB que el representante puede usar literalmente con el médico. OBLIGATORIO.
@@ -813,9 +813,9 @@ REGLAS DE MODO RESUMIDO:
                 if rag_coverage == "low":
                     max_tokens = 400
                 elif response_mode == "short":
-                    max_tokens = 500
+                    max_tokens = 600
                 else:
-                    max_tokens = 1000
+                    max_tokens = 1500
 
                 # Construir mensajes con historial de conversación
                 messages = [{"role": "system", "content": full_prompt}]
@@ -853,6 +853,7 @@ REGLAS DE MODO RESUMIDO:
                 messages.append({"role": "user", "content": user_message})
 
                 # Stream de respuesta con Kimi K2 (Groq)
+                import asyncio
                 stream = llm_client.chat.completions.create(
                     model=LLM_MODEL,
                     messages=messages,
@@ -861,18 +862,22 @@ REGLAS DE MODO RESUMIDO:
                     temperature=0.3
                 )
 
-                # Enviar chunks al frontend
+                # Enviar chunks al frontend con timeout protection
                 full_response = ""
-                for chunk in stream:
-                    if chunk.choices[0].delta.content:
-                        token = chunk.choices[0].delta.content
-                        full_response += token
-                        await websocket.send_json({
-                            "type": "token",
-                            "content": token
-                        })
+                try:
+                    for chunk in stream:
+                        if chunk.choices[0].delta.content:
+                            token = chunk.choices[0].delta.content
+                            full_response += token
+                            await websocket.send_json({
+                                "type": "token",
+                                "content": token
+                            })
+                except Exception as stream_err:
+                    print(f"[STREAM] Error durante streaming: {stream_err}")
+                    # Si hubo error parcial, enviar lo que tenemos
 
-                # Guardar en historial
+                # Guardar en historial (incluso respuesta parcial)
                 conversation_history.append({"role": "user", "content": user_message})
                 conversation_history.append({"role": "assistant", "content": full_response})
 
