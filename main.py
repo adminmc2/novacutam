@@ -660,7 +660,7 @@ async def websocket_chat(websocket: WebSocket):
                 relevant_docs = [r for r in results if r[1] >= 0.1]
                 strong_docs = [r for r in results if r[1] >= 0.35]
                 max_score = max((r[1] for r in results), default=0.0)
-                rag_coverage = "high" if len(strong_docs) >= 2 else ("medium" if len(relevant_docs) >= 1 else "low")
+                rag_coverage = "high" if (len(strong_docs) >= 2 or max_score >= 0.5 or (len(strong_docs) >= 1 and len(relevant_docs) >= 3)) else ("medium" if len(relevant_docs) >= 1 else "low")
 
                 # Enviar info del agente + cobertura RAG al frontend
                 print(f"[DEBUG] RAG coverage: {rag_coverage}, max_score: {max_score:.2f}, docs: {len(relevant_docs)}")
