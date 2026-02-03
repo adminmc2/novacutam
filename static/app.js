@@ -1947,6 +1947,13 @@ function isActionableQuery(text) {
     return pharmaKeywords.some(kw => kw.test(t));
 }
 
+function releaseCachedMicStream() {
+    if (state.cachedMicStream) {
+        state.cachedMicStream.getTracks().forEach(t => t.stop());
+        state.cachedMicStream = null;
+    }
+}
+
 // ============================================
 // Enviar mensaje por texto
 // ============================================
