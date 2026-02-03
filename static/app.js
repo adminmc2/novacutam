@@ -2513,6 +2513,12 @@ function stopWakeWordListening() {
  * Like Siri: say "Hola Novia" → it listens to everything you say.
  */
 function onWakeWordDetected() {
+    // No activar si el usuario no ha hecho login
+    if (localStorage.getItem('novia_logged_in') !== 'true') {
+        console.log('[WakeWord] Ignorado — usuario no logueado');
+        return;
+    }
+
     playWakeBeep();
     // Voice interaction → auto-enable TTS responses
     enableTTS();
@@ -2674,6 +2680,8 @@ async function playTTS(text) {
     // Detener audio previo si existe
     stopTTS();
     state.ttsCancelled = false;  // Reset flag para esta nueva reproducción
+    // Pausar wake word para que no capte el audio del TTS
+    stopWakeWordListening();
 
     if (!text || !text.trim()) return;
 
@@ -2770,6 +2778,8 @@ async function playTTS(text) {
 function playTTSAndWait(text) {
     return new Promise(async (resolve) => {
         state.ttsCancelled = false;
+        // Pausar wake word para que no capte el audio del TTS como wake word
+        stopWakeWordListening();
         try {
             console.log('[TTS] playTTSAndWait: requesting audio for:', text.substring(0, 50) + '...');
             const response = await fetch('/api/tts', {
@@ -2815,6 +2825,7 @@ function playTTSAndWait(text) {
                 URL.revokeObjectURL(audioUrl);
                 state.ttsAudio = null;
                 if (window.orbSetListening) window.orbSetListening(false);
+                resumeWakeWordAfterRecording();
                 resolve();
             };
             const onError = (e) => {
@@ -2824,6 +2835,7 @@ function playTTSAndWait(text) {
                 URL.revokeObjectURL(audioUrl);
                 state.ttsAudio = null;
                 if (window.orbSetListening) window.orbSetListening(false);
+                resumeWakeWordAfterRecording();
                 resolve();
             };
             audio.addEventListener('ended', onEnded);
@@ -2839,6 +2851,7 @@ function playTTSAndWait(text) {
         } catch (e) {
             console.error('[TTS] playTTSAndWait error:', e);
             if (window.orbSetListening) window.orbSetListening(false);
+            resumeWakeWordAfterRecording();
             resolve();
         }
     });
@@ -2907,7 +2920,7 @@ function addSpeakerButton(messageElement, fullText) {
 let demoOrbClicked = false;
 
 const VALID_CREDENTIALS = {
-    usuario: 'Pablo',
+    usuario: 'José Luis',
     password: 'Prisma'
 };
 
@@ -3057,7 +3070,7 @@ async function handleDemoOrbClick() {
     // Immediate visual feedback — activate 3D orb animation instantly
     if (window.orbSetListening) window.orbSetListening(true);
 
-    const greetingText = 'Hola, soy Novia, tu asistente de ventas de Novacutan. Estoy aquí para ayudarte con información de productos, protocolos de aplicación y argumentos de venta. Será un placer trabajar juntos.';
+    const greetingText = 'Muchas gracias José Luis por la oportunidad de conocernos. Soy Novia, tu asistente de Novacutan. Estaré siempre a tu disposición y será un placer que colaboremos juntos.';
 
     try {
         // Play TTS greeting and wait for it to finish

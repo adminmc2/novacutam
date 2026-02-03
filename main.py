@@ -242,13 +242,13 @@ REGLAS:
 10. NUNCA incluyas caracteres especiales como |, *, #, >, -, ni guiones al inicio de líneas. El texto debe sonar 100% natural al escucharlo."""
 
 
-def _generate_tts_summary(agent_response: str) -> str:
+async def _generate_tts_summary(agent_response: str) -> str:
     """Genera un resumen conversacional corto del texto del agente para TTS."""
     if not llm_client:
         return ""
 
     try:
-        response = llm_client.chat.completions.create(
+        response = await llm_client.chat.completions.create(
             model=LLM_MODEL,
             messages=[
                 {"role": "system", "content": TTS_SUMMARY_PROMPT},
@@ -366,7 +366,7 @@ async def text_to_speech(req: TTSRequest):
     if req.skip_summary:
         summary = req.text.strip()
     else:
-        summary = await asyncio.to_thread(_generate_tts_summary, req.text)
+        summary = await _generate_tts_summary(req.text)
         if not summary:
             raise HTTPException(status_code=500, detail="No se pudo generar resumen para TTS")
 
