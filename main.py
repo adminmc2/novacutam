@@ -813,9 +813,9 @@ REGLAS DE MODO RESUMIDO:
                 if rag_coverage == "low":
                     max_tokens = 400
                 elif response_mode == "short":
-                    max_tokens = 600
+                    max_tokens = 500
                 else:
-                    max_tokens = 1500
+                    max_tokens = 1000
 
                 # Construir mensajes con historial de conversación
                 messages = [{"role": "system", "content": full_prompt}]
@@ -853,7 +853,6 @@ REGLAS DE MODO RESUMIDO:
                 messages.append({"role": "user", "content": user_message})
 
                 # Stream de respuesta con Kimi K2 (Groq)
-                import asyncio
                 stream = llm_client.chat.completions.create(
                     model=LLM_MODEL,
                     messages=messages,
@@ -862,22 +861,18 @@ REGLAS DE MODO RESUMIDO:
                     temperature=0.3
                 )
 
-                # Enviar chunks al frontend con timeout protection
+                # Enviar chunks al frontend
                 full_response = ""
-                try:
-                    for chunk in stream:
-                        if chunk.choices[0].delta.content:
-                            token = chunk.choices[0].delta.content
-                            full_response += token
-                            await websocket.send_json({
-                                "type": "token",
-                                "content": token
-                            })
-                except Exception as stream_err:
-                    print(f"[STREAM] Error durante streaming: {stream_err}")
-                    # Si hubo error parcial, enviar lo que tenemos
+                for chunk in stream:
+                    if chunk.choices[0].delta.content:
+                        token = chunk.choices[0].delta.content
+                        full_response += token
+                        await websocket.send_json({
+                            "type": "token",
+                            "content": token
+                        })
 
-                # Guardar en historial (incluso respuesta parcial)
+                # Guardar en historial
                 conversation_history.append({"role": "user", "content": user_message})
                 conversation_history.append({"role": "assistant", "content": full_response})
 
