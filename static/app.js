@@ -2927,7 +2927,7 @@ function addSpeakerButton(messageElement, fullText) {
 let demoOrbClicked = false;
 
 const VALID_CREDENTIALS = {
-    usuario: 'José Luis',
+    usuario: 'Jorge',
     password: 'Prisma'
 };
 
@@ -3066,7 +3066,7 @@ function checkAuthOnLoad() {
     }
 }
 
-// Demo: Orb click en login — saludo TTS, José Luis ingresa credenciales después
+// Demo: Orb click en login — saludo TTS, Jorge ingresa credenciales después
 async function handleDemoOrbClick() {
     if (demoOrbClicked) return; // Prevent multiple clicks
     demoOrbClicked = true;
@@ -3077,7 +3077,7 @@ async function handleDemoOrbClick() {
     // Immediate visual feedback — activate 3D orb animation instantly
     if (window.orbSetListening) window.orbSetListening(true);
 
-    const greetingText = 'Muchas gracias José Luis por la oportunidad de conocernos. Soy Novia, tu asistente de Novacutan. Estaré siempre a tu disposición y será un placer que colaboremos juntos.';
+    const greetingText = 'Muchas gracias Jorge por la oportunidad de conocernos. Soy Novia, tu asistente de Novacutan. Estaré siempre a tu disposición y será un placer que colaboremos juntos.';
 
     try {
         // Play TTS greeting and wait for it to finish
@@ -3089,7 +3089,7 @@ async function handleDemoOrbClick() {
     // Stop orb animation
     if (window.orbSetListening) window.orbSetListening(false);
 
-    // Focus en el campo de usuario para que José Luis ingrese sus credenciales
+    // Focus en el campo de usuario para que Jorge ingrese sus credenciales
     elements.loginUser?.focus();
 }
 
