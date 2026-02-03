@@ -38,6 +38,7 @@ uniform float time;
 uniform vec2 resolution;
 uniform float intensity; // 0.0 = idle, 1.0 = listening
 uniform float mood;      // 0.0 = calma, 0.5 = moderado, 1.0 = vibrante
+uniform float smallMode; // 1.0 = tamaño pequeño (<80px), 0.0 = normal
 
 #define FC gl_FragCoord.xy
 #define R resolution
@@ -50,7 +51,7 @@ uniform float mood;      // 0.0 = calma, 0.5 = moderado, 1.0 = vibrante
 #define TAU radians(360.)
 #define PI (TAU/2.)
 
-// Paleta Novacutan con variación intensa
+// Paleta Novacutan con transiciones suaves y elegantes
 vec3 novacutanHue(float a) {
     // Colores Novacutan
     vec3 blue = vec3(0.4, 0.494, 0.918);      // #667eea
@@ -58,11 +59,11 @@ vec3 novacutanHue(float a) {
     vec3 pink = vec3(0.941, 0.576, 0.984);    // #f093fb
     vec3 cyan = vec3(0.42, 0.85, 1.0);        // cyan accent
 
-    // Transición fluida entre colores usando seno
+    // Transición muy suave entre colores
     float t = fract(a);
     vec3 col;
 
-    // Ciclo: blue -> purple -> pink -> cyan -> blue
+    // Ciclo suave: blue -> purple -> pink -> cyan -> blue
     float phase = t * 4.0;
     if (phase < 1.0) {
         col = mix(blue, purple, smoothstep(0.0, 1.0, phase));
@@ -74,9 +75,9 @@ vec3 novacutanHue(float a) {
         col = mix(cyan, blue, smoothstep(0.0, 1.0, phase - 3.0));
     }
 
-    // Añadir variación sinusoidal para brillo
-    float brightness = 0.2 + intensity * 0.3;
-    col += brightness * sin(PI * a * 2.0 + vec3(0.0, 2.0, 4.0));
+    // Variación de brillo muy sutil (no discoteca)
+    float brightness = 0.08 + intensity * 0.12;
+    col += brightness * sin(PI * a * 0.5 + vec3(0.0, 1.0, 2.0));
 
     return clamp(col, 0.0, 1.0);
 }
@@ -96,8 +97,8 @@ vec2 pmod(vec2 p, float n) {
 }
 
 vec3 pattern(inout vec2 uv) {
-    // Número de pétalos según mood (más = más complejo)
-    float petals = 7.0 + mood * 4.0;
+    // Número de pétalos: menos en modo pequeño para mejor visibilidad
+    float petals = mix(7.0 + mood * 4.0, 4.0 + mood * 1.0, smallMode);
     uv = pmod(uv, petals);
     uv = uv.yx;
     vec2 p = uv;
@@ -105,13 +106,15 @@ vec3 pattern(inout vec2 uv) {
     uv.x -= clamp(round(uv.x * n), 1.0, 4.0) / n;
     float id = clamp(round(uv.x * n), 1.0, 4.0);
 
-    // Velocidad de animación según intensidad
-    float speed = 1.0 + intensity * 2.0 + mood;
+    // Velocidad de animación suave (sync con voz, no discoteca)
+    float speed = 0.15 + intensity * 0.6 + mood * 0.2;
     uv.x -= sin(-1.6 + id + T * PI * speed + p.x * id) * 0.0125 + 0.005;
 
     float d = SE(length(uv), 0.023 * (6.0 - round(p.x * n)));
     vec3 col = vec3(0);
-    vec3 c = hue(0.2 * (round(p.x * n) - T * (3.0 + intensity * 4.0)) + S(-0.25, 1.0, uv.x) * 0.5);
+    // Transición de color suave y elegante
+    float colorSpeed = 0.3 + intensity * 1.2;
+    vec3 c = hue(0.2 * (round(p.x * n) - T * colorSpeed) + S(-0.25, 1.0, uv.x) * 0.5);
     col += tanh(c * c * c) * clamp(d * d * d, 0.0, 1.0);
     return sqrt(col);
 }
@@ -120,32 +123,45 @@ void main() {
     vec2 uv = (FC - 0.5 * R) / MN;
     vec2 p, st = uv;
 
-    // Zoom según mood (más cerca = más detalle)
-    float zoom = 3.5 + mood * 1.0;
+    // Zoom según mood y tamaño (menor zoom en pequeño = más visible)
+    float zoom = mix(3.5 + mood * 1.0, 2.0 + mood * 0.5, smallMode);
     uv *= zoom;
 
-    // Rotación suave
-    float rotSpeed = 0.02 + intensity * 0.03;
-    uv *= rot(rotSpeed * sin(T - uv.y * 2.0) - 0.0125);
+    // Rotación muy suave y elegante
+    float rotSpeed = 0.005 + intensity * 0.015;
+    uv *= rot(rotSpeed * sin(T * (0.3 + intensity * 0.3) - uv.y * 2.0) - 0.0125);
     p = uv;
     p *= rot(0.0125);
 
     vec3 col;
     vec3 c = pattern(uv);
-    float k = 0.05 / length(uv) * pow(0.5 + 0.5 * sin(T * PI), 3.0);
+    // Pulso central suave
+    float pulseSpeed = 0.15 + intensity * 0.25;
+    float k = 0.05 / length(uv) * pow(0.5 + 0.5 * sin(T * PI * pulseSpeed), 3.0);
     col = mix(k * tanh(c * c * c), pattern(p), 0.985);
     col *= reveal(st);
 
-    // Glow central con colores Novacutan
-    float glow = exp(-length(st) * (2.5 - intensity)) * (0.2 + intensity * 0.3);
+    // Glow central suave con colores Novacutan (más intenso en modo pequeño)
+    float glowIntensity = mix(0.15 + intensity * 0.2, 0.25 + intensity * 0.3, smallMode);
+    float glow = exp(-length(st) * (2.8 - intensity * 0.5)) * glowIntensity;
     vec3 glowColor = mix(
         vec3(0.4, 0.494, 0.918),  // blue
         vec3(0.463, 0.294, 0.635), // purple
-        0.5 + 0.5 * sin(T * 0.5)
+        0.5 + 0.5 * sin(T * 0.2)  // transición muy lenta
     );
     col += glowColor * glow;
 
-    O = vec4(col, 1.0);
+    // Máscara circular suave para eliminar esquinas oscuras (más suave en pequeño)
+    float dist = length(st);
+    float maskOuter = mix(0.5, 0.48, smallMode);
+    float circleMask = 1.0 - smoothstep(0.35, maskOuter, dist);
+
+    // Alpha: solo visible dentro del círculo, sin fondo cuadrado
+    float baseAlpha = clamp(length(col) * 2.0, 0.0, 1.0);
+    float alpha = baseAlpha * circleMask;
+
+    // Color final con máscara
+    O = vec4(col * circleMask, alpha);
 }`;
 
     // Clase WebGL Orb
@@ -166,11 +182,12 @@ void main() {
             canvas.style.width = size + 'px';
             canvas.style.height = size + 'px';
 
-            // Get WebGL2 context
+            // Get WebGL2 context with transparency
             this.gl = canvas.getContext('webgl2', {
                 alpha: true,
-                premultipliedAlpha: false,
-                antialias: true
+                premultipliedAlpha: true,
+                antialias: true,
+                preserveDrawingBuffer: false
             });
 
             if (!this.gl) {
@@ -221,7 +238,11 @@ void main() {
                 time: gl.getUniformLocation(this.program, 'time'),
                 intensity: gl.getUniformLocation(this.program, 'intensity'),
                 mood: gl.getUniformLocation(this.program, 'mood'),
+                smallMode: gl.getUniformLocation(this.program, 'smallMode'),
             };
+
+            // Detectar si es un orb pequeño (<80px)
+            this.isSmall = this.size < 80;
         }
 
         setupGeometry() {
@@ -259,8 +280,8 @@ void main() {
         loop() {
             if (!this.running) return;
 
-            // Smooth intensity transition
-            this.intensity += (this.targetIntensity - this.intensity) * 0.1;
+            // Smooth intensity transition (más suave, sync con voz)
+            this.intensity += (this.targetIntensity - this.intensity) * 0.04;
 
             this.render();
             this.animId = requestAnimationFrame(() => this.loop());
@@ -274,6 +295,10 @@ void main() {
             gl.clearColor(0, 0, 0, 0);
             gl.clear(gl.COLOR_BUFFER_BIT);
 
+            // Enable blending for transparency
+            gl.enable(gl.BLEND);
+            gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
+
             gl.useProgram(this.program);
             gl.bindBuffer(gl.ARRAY_BUFFER, this.buffer);
 
@@ -281,6 +306,7 @@ void main() {
             gl.uniform1f(this.uniforms.time, now);
             gl.uniform1f(this.uniforms.intensity, this.intensity);
             gl.uniform1f(this.uniforms.mood, this.mood);
+            gl.uniform1f(this.uniforms.smallMode, this.isSmall ? 1.0 : 0.0);
 
             gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
         }
@@ -412,7 +438,11 @@ void main() {
 
         const w = container.offsetWidth;
         const h = container.offsetHeight;
-        const size = Math.min(w, h) || w || h || defaultSize;
+        // Fallback to CSS computed size or defaultSize
+        const style = getComputedStyle(container);
+        const cssW = parseInt(style.width) || defaultSize;
+        const cssH = parseInt(style.height) || defaultSize;
+        const size = Math.min(w, h) || Math.min(cssW, cssH) || defaultSize;
 
         const canvas = document.createElement('canvas');
         canvas.style.display = 'block';
@@ -457,14 +487,32 @@ void main() {
     // Init login orb
     function initLoginOrb() {
         const container = document.getElementById('login-orb-container');
-        if (container && container.offsetWidth > 0) {
-            const loginOrb = createOrb('login-orb-container', 200);
-            if (loginOrb) orbInstances.push(loginOrb);
-        } else if (container) {
-            requestAnimationFrame(initLoginOrb);
+        if (container) {
+            const w = container.offsetWidth;
+            const h = container.offsetHeight;
+            // Use CSS dimensions if offsetWidth is 0
+            const style = getComputedStyle(container);
+            const cssW = parseInt(style.width) || 0;
+            const cssH = parseInt(style.height) || 0;
+
+            if (w > 0 || cssW > 0) {
+                const loginOrb = createOrb('login-orb-container', 260);
+                if (loginOrb) {
+                    orbInstances.push(loginOrb);
+                    console.log('[Orb] Login orb created:', w || cssW, 'x', h || cssH);
+                }
+            } else {
+                requestAnimationFrame(initLoginOrb);
+            }
         }
     }
-    initLoginOrb();
+
+    // Wait for DOM ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initLoginOrb);
+    } else {
+        initLoginOrb();
+    }
 
     // API pública
     window.orbSetListening = function(listening) {

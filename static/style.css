@@ -910,15 +910,15 @@ body[data-mood-active] .bento-card--mood {
 
 /* Orb wrapper — fixed size prevents layout shift during animation */
 .login-orb-wrapper {
-    width: 200px;
-    height: 200px;
-    margin-bottom: var(--space-20);
-    overflow: hidden;
+    width: 260px;
+    height: 260px;
+    margin-bottom: var(--space-16);
+    overflow: visible;
 }
 
 #login-orb-container {
-    width: 200px;
-    height: 200px;
+    width: 260px;
+    height: 260px;
     cursor: pointer;
 }
 
