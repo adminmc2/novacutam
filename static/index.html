@@ -473,10 +473,15 @@
     <!-- Markdown rendering -->
     <script src="https://cdn.jsdelivr.net/npm/marked@17.0.1/lib/marked.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dompurify@3.3.1/dist/purify.min.js"></script>
+    <!-- Streaming markdown parser (no re-parsea, solo append al DOM) -->
+    <script type="module">
+        import * as smd from "https://cdn.jsdelivr.net/npm/streaming-markdown/smd.min.js";
+        window.smd = smd;
+    </script>
     <!-- HTML to Canvas (infographic PNG export) -->
     <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
     <!-- Orb 3D Canvas -->
     <script src="/static/orb.js"></script>
-    <script src="/static/app.js?v=5.1.1"></script>
+    <script src="/static/app.js?v=5.7.0"></script>
 </body>
 </html>

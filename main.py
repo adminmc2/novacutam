@@ -16,7 +16,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse, StreamingResponse
 from pydantic import BaseModel
 from dotenv import load_dotenv
-from openai import OpenAI
+from openai import AsyncOpenAI
 from groq import Groq
 
 # Importar sistema de agentes
@@ -27,13 +27,13 @@ load_dotenv()
 # Clientes API
 groq_api_key = os.getenv("GROQ_API_KEY")
 
-# Cliente Groq para LLM (Kimi K2) — usando OpenAI SDK compatible
-llm_client = OpenAI(
+# Cliente Groq para LLM (Kimi K2) — usando AsyncOpenAI para no bloquear event loop
+llm_client = AsyncOpenAI(
     api_key=groq_api_key,
     base_url="https://api.groq.com/openai/v1"
 ) if groq_api_key else None
 
-LLM_MODEL = "moonshotai/kimi-k2-instruct"
+LLM_MODEL = "llama-3.3-70b-versatile"  # Kimi K2 saturado (503), usando Llama 3.3 como respaldo
 
 # Modelo dedicado para infografías (JSON estructurado) — Llama 3.3 es más fiable para JSON
 INFOGRAPHIC_MODEL = "llama-3.3-70b-versatile"
@@ -640,13 +640,16 @@ async def websocket_chat(websocket: WebSocket):
             try:
                 # Clasificar intención con reglas (rápido y sin API call)
                 intent = orchestrator.classify_intent_rules(user_message)
+                print(f"[DEBUG] Intent: {intent}")
 
                 # Obtener agente correspondiente
                 agent = orchestrator.get_agent(intent)
+                print(f"[DEBUG] Agente: {agent.name}")
 
                 # Buscar contexto relevante en RAG (con fallback si score bajo)
                 results = agent.search_knowledge_with_fallback(user_message, top_k=5)
                 context = agent.format_context(results, min_score=0.1)
+                print(f"[DEBUG] RAG: {len(results)} resultados, contexto: {len(context)} chars")
 
                 # Enriquecer contexto con inteligencia del agente
                 enrichment = agent.enrich_context(user_message, results)
@@ -660,6 +663,7 @@ async def websocket_chat(websocket: WebSocket):
                 rag_coverage = "high" if len(strong_docs) >= 2 else ("medium" if len(relevant_docs) >= 1 else "low")
 
                 # Enviar info del agente + cobertura RAG al frontend
+                print(f"[DEBUG] RAG coverage: {rag_coverage}, max_score: {max_score:.2f}, docs: {len(relevant_docs)}")
                 await websocket.send_json({
                     "type": "agent_info",
                     "agent": intent,
@@ -667,6 +671,7 @@ async def websocket_chat(websocket: WebSocket):
                     "rag_coverage": rag_coverage,
                     "max_score": round(max_score, 2)
                 })
+                print(f"[DEBUG] agent_info enviado al frontend")
 
                 # Instrucciones dinámicas según cobertura RAG
                 if rag_coverage == "low":
@@ -852,8 +857,11 @@ REGLAS DE MODO RESUMIDO:
                 # Añadir mensaje actual del usuario
                 messages.append({"role": "user", "content": user_message})
 
-                # Stream de respuesta con Kimi K2 (Groq)
-                stream = llm_client.chat.completions.create(
+                print(f"[DEBUG] Llamando a Groq — modelo: {LLM_MODEL}, max_tokens: {max_tokens}, msgs: {len(messages)}")
+                print(f"[DEBUG] System prompt: {len(messages[0]['content'])} chars")
+
+                # Stream de respuesta con Kimi K2 (Groq) — async para no bloquear event loop
+                stream = await llm_client.chat.completions.create(
                     model=LLM_MODEL,
                     messages=messages,
                     stream=True,
@@ -861,16 +869,19 @@ REGLAS DE MODO RESUMIDO:
                     temperature=0.3
                 )
 
-                # Enviar chunks al frontend
+                # Enviar chunks al frontend — async for permite flush real entre tokens
                 full_response = ""
-                for chunk in stream:
-                    if chunk.choices[0].delta.content:
+                token_count = 0
+                async for chunk in stream:
+                    if chunk.choices and chunk.choices[0].delta.content:
                         token = chunk.choices[0].delta.content
                         full_response += token
+                        token_count += 1
                         await websocket.send_json({
                             "type": "token",
                             "content": token
                         })
+                print(f"[DEBUG] Stream terminado — {token_count} tokens enviados")
 
                 # Guardar en historial
                 conversation_history.append({"role": "user", "content": user_message})
@@ -881,12 +892,17 @@ REGLAS DE MODO RESUMIDO:
                     conversation_history = conversation_history[-(MAX_HISTORY * 2):]
 
                 # Señal de fin de mensaje
+                print(f"[DEBUG] Enviando 'end' al frontend...")
                 await websocket.send_json({
                     "type": "end",
                     "full_response": full_response
                 })
+                print(f"[DEBUG] 'end' enviado OK — respuesta completa")
 
             except Exception as e:
+                print(f"[ERROR] {type(e).__name__}: {e}")
+                import traceback
+                traceback.print_exc()
                 await websocket.send_json({
                     "type": "error",
                     "message": f"Error procesando mensaje: {str(e)}"

@@ -56,6 +56,8 @@ const state = {
     voiceModeRecording: false,  // true when recording mode answer (longer silence detection)
     // iOS audio unlock
     iosAudioElement: null,      // pre-created Audio element for iOS
+    // Streaming markdown parser (smd)
+    _smdParser: null,
     // Mood
     mood: {
         value: 100,
@@ -1395,40 +1397,57 @@ function sendToWebSocket(message, responseMode = 'full') {
             // Quitar indicador de escritura en el primer token
             if (!assistantMessage) {
                 removeTypingIndicator();
-                // Insertar warning de cobertura RAG si es baja o media
                 if (state.pendingRagCoverage && state.pendingRagCoverage !== 'high') {
                     insertRagCoverageWarning(state.pendingRagCoverage, state.pendingRagScore);
                 }
                 assistantMessage = addMessage('', 'assistant');
+                // Inicializar streaming-markdown parser para este mensaje
+                if (window.smd) {
+                    const renderer = window.smd.default_renderer(assistantMessage);
+                    state._smdParser = window.smd.parser(renderer);
+                } else {
+                    state._smdParser = null;
+                }
             }
 
             state.currentMessage += data.content;
-            // During streaming: render markdown without icon enrichment (performance)
-            assistantMessage.innerHTML = renderMarkdown(state.currentMessage, false);
+
+            // Usar streaming-markdown: solo append al DOM, O(1) por token
+            if (state._smdParser) {
+                window.smd.parser_write(state._smdParser, data.content);
+            } else {
+                // Fallback: marked.parse (puede congelar en respuestas largas)
+                assistantMessage.innerHTML = renderMarkdown(state.currentMessage, false);
+            }
             elements.chatMessages.scrollTop = elements.chatMessages.scrollHeight;
         }
         else if (data.type === 'end') {
-            // Final render with full icon enrichment
-            if (assistantMessage && state.currentMessage) {
-                assistantMessage.innerHTML = renderMarkdown(state.currentMessage, true);
-                initResponsiveTables(assistantMessage);
+            console.log('[WS] END recibido — finalizando respuesta');
 
-                // Persistir respuesta en búsquedas recientes
+            // Cambiar status INMEDIATAMENTE
+            elements.chatStatus.textContent = 'En línea';
+            state.pendingRagCoverage = null;
+            state.pendingRagScore = 0;
+
+            // Finalizar streaming-markdown parser (flush remaining)
+            if (state._smdParser) {
+                window.smd.parser_end(state._smdParser);
+                state._smdParser = null;
+            }
+
+            // Post-procesamiento (tablas responsive, speaker, TTS)
+            if (assistantMessage && state.currentMessage) {
+                initResponsiveTables(assistantMessage);
+                elements.chatMessages.scrollTop = elements.chatMessages.scrollHeight;
+
                 if (state.currentQuery) {
                     updateRecentSearchAnswer(state.currentQuery, state.currentMessage);
                 }
-
-                // TTS: añadir botón speaker + auto-play si está habilitado o fue interacción por voz
                 addSpeakerButton(assistantMessage, state.currentMessage);
                 if (state.ttsEnabled || state.voiceTriggered) {
                     playTTS(state.currentMessage);
                 }
             }
-            elements.chatStatus.textContent = 'En línea';
-            // Limpiar estado de cobertura RAG
-            state.pendingRagCoverage = null;
-            state.pendingRagScore = 0;
-            // Reset assistantMessage for next query
             assistantMessage = null;
         }
         else if (data.type === 'agent_info') {
@@ -2888,7 +2907,7 @@ function addSpeakerButton(messageElement, fullText) {
 let demoOrbClicked = false;
 
 const VALID_CREDENTIALS = {
-    usuario: 'José Luis',
+    usuario: 'Pablo',
     password: 'Prisma'
 };
 
