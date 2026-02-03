@@ -51,9 +51,9 @@ class SpanishStemmer:
 # ============================================
 SYNONYMS: Dict[str, List[str]] = {
     # Productos Novacutan
-    'biopro': ['biomodulador', 'bio pro', 'bioproducto', 'novacutan biopro'],
+    'biopro': ['biomodulador', 'bio pro', 'bio-pro', 'bioproducto', 'novacutan biopro'],
     'biomodulador': ['biopro', 'bioestimulador', 'regenerador'],
-    'fbio': ['f bio', 'relleno', 'filler', 'fbio dvs'],
+    'fbio': ['f bio', 'f-bio', 'relleno', 'filler', 'fbio dvs'],
     'relleno': ['filler', 'fbio', 'ácido hialurónico', 'dermal filler'],
     'filler': ['relleno', 'fbio', 'ácido hialurónico'],
     'light': ['ligero', 'suave', 'sutil', 'fbio light', 'fbio dvs light'],
@@ -154,10 +154,30 @@ class RAGEngine:
         self.qa_pairs = data['qa_pairs']
         print(f"[RAG] Cargadas {len(self.qa_pairs)} preguntas")
 
+    # Nombres de producto con guion → forma canónica (sin guion)
+    PRODUCT_ALIASES = {
+        'bio-pro': 'biopro',
+        'bio pro': 'biopro',
+        'f-bio': 'fbio',
+        'f bio': 'fbio',
+        'v-lift': 'vlift',
+        'v lift': 'vlift',
+        'd-lift': 'dlift',
+        'd lift': 'dlift',
+        '3-dvs': '3dvs',
+        '3 dvs': '3dvs',
+        'fbio-dvs': 'fbio dvs',
+        'f-bio-dvs': 'fbio dvs',
+        'f-bio dvs': 'fbio dvs',
+    }
+
     def _normalize(self, text: str) -> str:
-        """Normaliza texto: minúsculas, sin acentos para búsqueda"""
+        """Normaliza texto: minúsculas, sin acentos, unifica nombres de producto"""
         text = text.lower()
-        # Preservar acentos en el texto pero normalizar para búsqueda
+        # Unificar nombres de producto con/sin guion ANTES de quitar acentos
+        for alias, canonical in self.PRODUCT_ALIASES.items():
+            text = text.replace(alias, canonical)
+        # Quitar acentos para búsqueda
         replacements = {
             'á': 'a', 'é': 'e', 'í': 'i', 'ó': 'o', 'ú': 'u',
             'ü': 'u', 'ñ': 'n'
